@@ -12,14 +12,14 @@ const testimonials = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-k83MyoiH43lpI6Y-TY17A2JCPudD_7Av9A&s",
     quote: `"I wanted to publish my first novel, and WORDSMITTERS made it possible. The coaching, ghostwriting, and publishing support were beyond my expectations."`,
-    name: "Dan-Sada T",
+    name: "Grace T",
   },
   {
     id: 2,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-k83MyoiH43lpI6Y-TY17A2JCPudD_7Av9A&s",
     quote: `"WORDSMITTERS' editing and proofreading services took my manuscript to the next level. Their attention to detail is exceptional!"`,
-    name: "Halima A ",
+    name: "Hanatu A ",
   },
   {
     id: 3,
