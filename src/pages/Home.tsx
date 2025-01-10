@@ -44,7 +44,7 @@ const Home: React.FC = () => {
     <div className="font-merri">
       <Header />
       <header className="p-6 sm:p-8 mt-24 sm:mt-18 text-center">
-        <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold">
+        <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold">
           <div className="mb-4">Professional</div>
           <div className="relative text-sec1 h-[60px] sm:h-[80px] md:h-[100px] mb-4">
             <AnimatePresence mode="wait">
@@ -62,9 +62,9 @@ const Home: React.FC = () => {
           </div>
           <div className="mt-2">Services</div>
         </h1>
-        <p className="mt-4 text-base sm:text-xl md:text-3xl">
+        <p className="mt-4 text-base sm:text-xl md:text-2xl">
           Transform your ideas into compelling stories and impactful content
-          with Wordsmitter. <br />
+          with Wordsmitters. <br />
           We specialize in crafting words that resonate, <br />
           ensuring your message is both powerful and memorable. <br />
         </p>
@@ -79,19 +79,19 @@ const Home: React.FC = () => {
       <Services />
 
       <section className="p-4 sm:p-6 text-center mt-8 mx-auto max-w-screen-xl border-b-[3px] border-t-[3px] border-sec1">
-        <h2 className="text-2xl text-sec1 sm:text-3xl font-bold">
+        <h2 className="text-2xl text-sec1 sm:text-2xl font-bold">
           Why Choose Us?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6">
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">Expert Writers</h3>
+            <h3 className="text-lg sm:text-lg font-semibold">Expert Writers</h3>
             <p>
               Seasoned professionals in various writing domains, delivering
               high-quality content.
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">
+            <h3 className="text-lg sm:text-lg font-semibold">
               Affordable Pricing
             </h3>
             <p>
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">
+            <h3 className="text-lg sm:text-lg font-semibold">
               Timely Delivery
             </h3>
             <p>
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">
+            <h3 className="text-lg sm:text-lg font-semibold">
               Confidentiality Guaranteed
             </h3>
             <p>
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">
+            <h3 className="text-lg sm:text-lg font-semibold">
               Tailored to Your Voice
             </h3>
             <p>
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">Proven Results</h3>
+            <h3 className="text-lg sm:text-lg font-semibold">Proven Results</h3>
             <p>
               Our expert writers have a track record of delivering exceptional
               content that achieves results.
@@ -143,33 +143,33 @@ const Home: React.FC = () => {
       </section>
 
       <section className="p-4 sm:p-6 text-center mx-auto max-w-screen-xl border-b-[3px] border-sec1">
-        <h2 className="text-2xl text-sec1 sm:text-3xl font-bold">
+        <h2 className="text-2xl text-sec1 sm:text-2xl font-bold">
           How It Works
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 my-6">
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">Consultation</h3>
+            <h3 className="text-lg sm:text-lg font-semibold">Consultation</h3>
             <p>
               Share your vision and let us understand your unique needs and
               goals.
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">Proposal</h3>
+            <h3 className="text-lg sm:text-lg font-semibold">Proposal</h3>
             <p>
               Receive a customized plan that outlines how we’ll bring your
               vision to life.
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">Creation</h3>
+            <h3 className="text-lg sm:text-lg font-semibold">Creation</h3>
             <p>
               We bring your project to life with creativity, expertise, and
               attention to detail.
             </p>
           </div>
           <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold">Delivery</h3>
+            <h3 className="text-lg sm:text-lg font-semibold">Delivery</h3>
             <p>
               Receive work ready to inspire and make an impact in your field.
             </p>
@@ -184,7 +184,7 @@ const Home: React.FC = () => {
       </section>
       <section className=" pb-12 my-8 sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl text-sec font-[verdana] font-bold  mb-8">
+          <h2 className="text-2xl text-sec font-[verdana] font-bold  mb-8">
             What Our Clients Say
           </h2>
 
@@ -201,7 +201,7 @@ const Home: React.FC = () => {
                     alt={`Customer ${testimonial.name}`}
                     className="w-16 h-16 object-cover overflow-hidden rounded-full mb-4 shadow-md" // Customer image
                   />
-                  <p className="text-lg text-sec italic  ">
+                  <p className="text-base text-sec italic  ">
                     "{testimonial.quote}"
                   </p>{" "}
                   {/* Customer quote */}
