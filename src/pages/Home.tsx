@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import Services from "../components/ServiceHome";
 import Carousel from "../components/Carousel";
 
@@ -68,12 +67,9 @@ const Home: React.FC = () => {
         We specialize in crafting words that resonate, <br />
          ensuring your message is both powerful and memorable. <br />
         </p>
-        <Link
-          to={"/contact"}
-          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-        >
-          Connect with Us
-        </Link>
+        <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
+  Connect with us
+</a>
       </header>
 
       <Services />
@@ -106,12 +102,9 @@ const Home: React.FC = () => {
       <p>Our expert writers have a track record of delivering exceptional content that achieves results.</p>
     </div>
   </div>
-  <Link
-    to={"/contact"}
-    className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-  >
-    Connect with Us
-  </Link>
+  <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
+  Connect with us
+</a>
 </section>
 
 
@@ -135,12 +128,9 @@ const Home: React.FC = () => {
       <p>Receive work ready to inspire and make an impact in your field.</p>
     </div>
   </div>
-  <Link
-    to={"/contact"}
-    className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-  >
-    Connect with Us
-  </Link>
+  <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
+  Connect with us
+</a>
 </section>
 <section className=" pb-12 my-8 sm:px-8">
         <div className="max-w-7xl mx-auto text-center">

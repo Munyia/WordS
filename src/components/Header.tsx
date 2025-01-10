@@ -79,9 +79,10 @@ const Header: React.FC = () => {
         <Link to={'/services'} className="hover:text-pry transition duration-300">
           Services
         </Link>
-          <a href="#contact" className="hover:text-pry transition duration-300">
-            Contact
-          </a>
+        <a href="#footer" className="hover:text-pry transition duration-300">
+  Contact
+</a>
+
         
         </div>
       </div>
@@ -97,9 +98,10 @@ const Header: React.FC = () => {
         <Link to={'/services'} className="hover:text-pry transition duration-300">
           Services
         </Link>
-        <a href="#contact" className="hover:text-pry transition duration-300">
-          Contact
-        </a>
+        <a href="#footer" className="hover:text-pry transition duration-300">
+  Contact
+</a>
+
       </div>
     </nav>
   );

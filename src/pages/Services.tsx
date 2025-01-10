@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -99,12 +98,9 @@ const ServicesPage = () => {
       </div>
   
       <div className="text-center mt-6">
-        <Link
-          to={"/contact"}
-          className="inline-block bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-        >
-          Connect with Us
-        </Link>
+      <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
+  Connect with us
+</a>
       </div>
     </div>
     <Footer />

@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp, FaEnvelope } from "re
 
 const Footer = () => {
   return (
-    <footer className="bg-sec text-white py-8">
+    <footer id="footer" className="bg-sec text-white py-8">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Footer Content */}
         <div className="flex flex-col items-center space-y-6">
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex space-x-6">
             {/* Social Media Icons */}
             <a
-              href="mailto:info@wordsmitter.com"
+              href="mailto:wordsmitters@gmail.com"
               className="hover:text-sec1 transition"
               aria-label="Email"
             >
@@ -26,7 +26,7 @@ const Footer = () => {
               <FaLinkedinIn size={24} />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/wordsmitters?mibextid=LQQJ4d"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-sec1 transition"

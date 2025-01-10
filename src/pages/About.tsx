@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -26,12 +25,9 @@ const AboutPage = () => {
             a deep understanding of diverse industries and genres, we specialize
             in crafting content that resonates and inspires.
           </p>
-          <Link
-    to={"/contact"}
-    className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-  >
-    Connect with Us
-  </Link>
+          <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
+  Connect with us
+</a>
         </div>
 
         {/* Mission and Vision */}
@@ -88,12 +84,9 @@ const AboutPage = () => {
             impactful, results-driven content that aligns with your vision and
             exceeds expectations.
           </p>
-          <Link
-    to={"/contact"}
-    className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-  >
-    Connect with Us
-  </Link>
+          <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
+  Connect with us
+</a>
         </div>
 
         {/* Call to Action */}
