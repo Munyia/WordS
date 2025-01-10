@@ -1,4 +1,10 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,12 +16,13 @@ const Footer = () => {
           <div className="flex space-x-6">
             {/* Social Media Icons */}
             <a
-              href="mailto:wordsmitters@gmail.com"
+              href="mailto:wordsmitters@gmail.com?subject=Inquiry&body=Hello Wordsmitters,"
               className="hover:text-sec1 transition"
               aria-label="Email"
             >
               <FaEnvelope size={24} />
             </a>
+
             <a
               href="https://www.linkedin.com"
               target="_blank"
@@ -57,11 +64,8 @@ const Footer = () => {
 
         {/* Footer Divider */}
         <div className="mt-8 border-t border-white pt-6 text-center">
-  <p className="text-sm">
-    © 2024 Wordsmitters. All rights reserved.
-  </p>
-</div>
-
+          <p className="text-sm">© 2024 Wordsmitters. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

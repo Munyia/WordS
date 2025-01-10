@@ -63,79 +63,129 @@ const Home: React.FC = () => {
           <div className="mt-2">Services</div>
         </h1>
         <p className="mt-4 text-base sm:text-xl md:text-3xl">
-        Transform your ideas into compelling stories and impactful content with Wordsmitter. <br />
-        We specialize in crafting words that resonate, <br />
-         ensuring your message is both powerful and memorable. <br />
+          Transform your ideas into compelling stories and impactful content
+          with Wordsmitter. <br />
+          We specialize in crafting words that resonate, <br />
+          ensuring your message is both powerful and memorable. <br />
         </p>
-        <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
-  Connect with us
-</a>
+        <a
+          href="#footer"
+          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
+        >
+          Connect with us
+        </a>
       </header>
 
       <Services />
 
       <section className="p-4 sm:p-6 text-center mt-8 mx-auto max-w-screen-xl border-b-[3px] border-t-[3px] border-sec1">
-  <h2 className="text-2xl text-sec1 sm:text-3xl font-bold">Why Choose Us?</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6">
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Expert Writers</h3>
-      <p>Seasoned professionals in various writing domains, delivering high-quality content.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Affordable Pricing</h3>
-      <p>Top-notch services tailored to your budget, without compromising quality.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Timely Delivery</h3>
-      <p>Your projects delivered when you need them, with strict adherence to deadlines.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Confidentiality Guaranteed</h3>
-      <p>Your privacy is our priority. We ensure all projects are handled with strict confidentiality.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Tailored to Your Voice</h3>
-      <p>We craft every project to reflect your unique style and tone, making it truly yours.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Proven Results</h3>
-      <p>Our expert writers have a track record of delivering exceptional content that achieves results.</p>
-    </div>
-  </div>
-  <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
-  Connect with us
-</a>
-</section>
+        <h2 className="text-2xl text-sec1 sm:text-3xl font-bold">
+          Why Choose Us?
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6">
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">Expert Writers</h3>
+            <p>
+              Seasoned professionals in various writing domains, delivering
+              high-quality content.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Affordable Pricing
+            </h3>
+            <p>
+              Top-notch services tailored to your budget, without compromising
+              quality.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Timely Delivery
+            </h3>
+            <p>
+              Your projects delivered when you need them, with strict adherence
+              to deadlines.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Confidentiality Guaranteed
+            </h3>
+            <p>
+              Your privacy is our priority. We ensure all projects are handled
+              with strict confidentiality.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Tailored to Your Voice
+            </h3>
+            <p>
+              We craft every project to reflect your unique style and tone,
+              making it truly yours.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">Proven Results</h3>
+            <p>
+              Our expert writers have a track record of delivering exceptional
+              content that achieves results.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#footer"
+          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
+        >
+          Connect with us
+        </a>
+      </section>
 
-
-<section className="p-4 sm:p-6 text-center mx-auto max-w-screen-xl border-b-[3px] border-sec1">
-  <h2 className="text-2xl text-sec1 sm:text-3xl font-bold">How It Works</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 my-6">
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Consultation</h3>
-      <p>Share your vision and let us understand your unique needs and goals.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Proposal</h3>
-      <p>Receive a customized plan that outlines how we’ll bring your vision to life.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Creation</h3>
-      <p>We bring your project to life with creativity, expertise, and attention to detail.</p>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="text-lg sm:text-xl font-semibold">Delivery</h3>
-      <p>Receive work ready to inspire and make an impact in your field.</p>
-    </div>
-  </div>
-  <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
-  Connect with us
-</a>
-</section>
-<section className=" pb-12 my-8 sm:px-8">
+      <section className="p-4 sm:p-6 text-center mx-auto max-w-screen-xl border-b-[3px] border-sec1">
+        <h2 className="text-2xl text-sec1 sm:text-3xl font-bold">
+          How It Works
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 my-6">
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">Consultation</h3>
+            <p>
+              Share your vision and let us understand your unique needs and
+              goals.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">Proposal</h3>
+            <p>
+              Receive a customized plan that outlines how we’ll bring your
+              vision to life.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">Creation</h3>
+            <p>
+              We bring your project to life with creativity, expertise, and
+              attention to detail.
+            </p>
+          </div>
+          <div className="p-4 bg-white shadow rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold">Delivery</h3>
+            <p>
+              Receive work ready to inspire and make an impact in your field.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#footer"
+          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
+        >
+          Connect with us
+        </a>
+      </section>
+      <section className=" pb-12 my-8 sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl text-sec font-[verdana] font-bold  mb-8">
-          What Our Clients Say
+            What Our Clients Say
           </h2>
 
           {/* Carousel for testimonials */}
@@ -165,8 +215,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-
 
       <Footer />
     </div>

@@ -47,7 +47,9 @@ const Header: React.FC = () => {
             </span>
           ))}
         </div>
-        <p className="text-sec1 sm:text-sm text-xs pb-2">Expertly Carved Words, Seamlessly Yours</p>
+        <p className="text-sec1 sm:text-sm text-xs pb-2">
+          Expertly Carved Words, Seamlessly Yours
+        </p>
       </div>
 
       {/* Hamburger Menu */}
@@ -70,38 +72,44 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="flex flex-col space-y-6 p-6 text-sm text-sec font-semibold">
-        <Link to={'/'} className="hover:text-pry transition duration-300">
-          Home
-        </Link>
-        <Link to={'/about'} className="hover:text-pry transition duration-300">
+          <Link to={"/"} className="hover:text-pry transition duration-300">
+            Home
+          </Link>
+          <Link
+            to={"/about"}
+            className="hover:text-pry transition duration-300"
+          >
             About
           </Link>
-        <Link to={'/services'} className="hover:text-pry transition duration-300">
-          Services
-        </Link>
-        <a href="#footer" className="hover:text-pry transition duration-300">
-  Contact
-</a>
-
-        
+          <Link
+            to={"/services"}
+            className="hover:text-pry transition duration-300"
+          >
+            Services
+          </Link>
+          <a href="#footer" className="hover:text-pry transition duration-300">
+            Contact
+          </a>
         </div>
       </div>
 
       {/* Navigation Links for Larger Devices */}
       <div className="hidden md:flex space-x-4 text-lg text-sec font-semibold">
-        <Link to={'/'} className="hover:text-pry transition duration-300">
+        <Link to={"/"} className="hover:text-pry transition duration-300">
           Home
         </Link>
-        <Link to={'/about'} className="hover:text-pry transition duration-300">
-            About
-          </Link>
-        <Link to={'/services'} className="hover:text-pry transition duration-300">
+        <Link to={"/about"} className="hover:text-pry transition duration-300">
+          About
+        </Link>
+        <Link
+          to={"/services"}
+          className="hover:text-pry transition duration-300"
+        >
           Services
         </Link>
         <a href="#footer" className="hover:text-pry transition duration-300">
-  Contact
-</a>
-
+          Contact
+        </a>
       </div>
     </nav>
   );

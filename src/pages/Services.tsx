@@ -24,7 +24,11 @@ const ServicesPage = () => {
     },
     {
       title: "Content Writing",
-      details: ["Articles and blogs", "Website copywriting", "Product descriptions"],
+      details: [
+        "Articles and blogs",
+        "Website copywriting",
+        "Product descriptions",
+      ],
     },
     {
       title: "Speechwriting",
@@ -44,19 +48,23 @@ const ServicesPage = () => {
     },
     {
       title: "Editing and Proofreading",
-      details: [
-        "Manuscripts",
-        "Resumes and cover letters",
-        "Academic papers",
-      ],
+      details: ["Manuscripts", "Resumes and cover letters", "Academic papers"],
     },
     {
       title: "Creative Writing",
-      details: ["Screenplays and scripts", "Poetry and song lyrics", "Advertisements and jingles"],
+      details: [
+        "Screenplays and scripts",
+        "Poetry and song lyrics",
+        "Advertisements and jingles",
+      ],
     },
     {
       title: "Personal Content",
-      details: ["Letters and emails", "Obituaries and tributes", "Personal essays"],
+      details: [
+        "Letters and emails",
+        "Obituaries and tributes",
+        "Personal essays",
+      ],
     },
     {
       title: "Marketing and Copywriting",
@@ -70,42 +78,49 @@ const ServicesPage = () => {
 
   return (
     <section className="font-merri pt-6 mt-24 sm:mt-18 min-h-screen">
-    <Header />
-    <div className="max-w-screen-xl justify-center mx-auto p-6">
-      <div className="text-center mb-12">
-        <h1 className="text-2xl sm:text-4xl font-bold text-sec1">Our Writing Services</h1>
-        <p className="text-sm sm:text-lg mt-2 text-gray-600">
-          Discover a wide range of professional writing services tailored to meet your needs.
-        </p>
-      </div>
-  
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow duration-300"
+      <Header />
+      <div className="max-w-screen-xl justify-center mx-auto p-6">
+        <div className="text-center mb-12">
+          <h1 className="text-2xl sm:text-4xl font-bold text-sec1">
+            Our Writing Services
+          </h1>
+          <p className="text-sm sm:text-lg mt-2 text-gray-600">
+            Discover a wide range of professional writing services tailored to
+            meet your needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow duration-300"
+            >
+              <h2 className="text-xl font-semibold text-sec1 mb-4">
+                {service.title}
+              </h2>
+              <ul className="list-disc list-inside space-y-2">
+                {service.details.map((detail, idx) => (
+                  <li key={idx} className="text-sm sm:text-base text-gray-700">
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-6">
+          <a
+            href="#footer"
+            className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
           >
-            <h2 className="text-xl font-semibold text-sec1 mb-4">{service.title}</h2>
-            <ul className="list-disc list-inside space-y-2">
-              {service.details.map((detail, idx) => (
-                <li key={idx} className="text-sm sm:text-base text-gray-700">
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+            Connect with us
+          </a>
+        </div>
       </div>
-  
-      <div className="text-center mt-6">
-      <a href="#footer"  className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry">
-  Connect with us
-</a>
-      </div>
-    </div>
-    <Footer />
-  </section>
-  
+      <Footer />
+    </section>
   );
 };
 
