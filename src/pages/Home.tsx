@@ -46,7 +46,7 @@ const Home: React.FC = () => {
       <header className="p-6 sm:p-8 mt-24 sm:mt-18 text-center">
         <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold">
           <div className="mb-4">Professional</div>
-          <div className="relative text-sec1 h-[60px] sm:h-[80px] md:h-[100px] mb-4">
+          <div className="relative text-sec1 h-[60px] sm:h-[80px] md:h-[100px] ">
             <AnimatePresence mode="wait">
               <motion.span
                 key={words[currentWordIndex]}
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
               </motion.span>
             </AnimatePresence>
           </div>
-          <div className="mt-2">Services</div>
+          <div className="">Services</div>
         </h1>
         <p className="mt-4 text-base sm:text-xl md:text-2xl">
           Transform your ideas into compelling stories and impactful content

@@ -36,7 +36,7 @@ const Header: React.FC = () => {
     <nav className="p-4 flex font-merri justify-between h-24 items-center fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/30 shadow-md">
       {/* Logo */}
       <div>
-        <div className="text-4xl mb-3 text-sec font-bold">
+        <div className="text-3xl mb-3 text-sec font-bold">
           {displayedText.split("").map((letter, index) => (
             <span
               key={index}
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Navigation Links for Larger Devices */}
-      <div className="hidden md:flex space-x-4 text-lg text-sec font-semibold">
+      <div className="hidden md:flex space-x-4 text-base text-sec font-semibold">
         <Link to={"/"} className="hover:text-pry transition duration-300">
           Home
         </Link>
