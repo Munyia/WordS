@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header: React.FC = () => {
   const [displayedText, setDisplayedText] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
-  const fullText = "WordSmitter";
+  const fullText = "WordSmitters";
   const animationDelay = 500; // 0.5 seconds between letters
   const stayDuration = 5000; // 5 seconds when the full text is displayed
 
@@ -70,15 +70,15 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="flex flex-col space-y-6 p-6 text-sm text-sec font-semibold">
-          <a href="/" className="hover:text-pry transition duration-300">
-            Home
-          </a>
-          <a href="#contact" className="hover:text-pry transition duration-300">
+        <Link to={'/'} className="hover:text-pry transition duration-300">
+          Home
+        </Link>
+        <Link to={'/about'} className="hover:text-pry transition duration-300">
             About
-          </a>
-          <a href="/services" className="hover:text-pry transition duration-300">
-            Services
-          </a>
+          </Link>
+        <Link to={'/services'} className="hover:text-pry transition duration-300">
+          Services
+        </Link>
           <a href="#contact" className="hover:text-pry transition duration-300">
             Contact
           </a>
@@ -88,15 +88,15 @@ const Header: React.FC = () => {
 
       {/* Navigation Links for Larger Devices */}
       <div className="hidden md:flex space-x-4 text-lg text-sec font-semibold">
-        <a href="/" className="hover:text-pry transition duration-300">
+        <Link to={'/'} className="hover:text-pry transition duration-300">
           Home
-        </a>
+        </Link>
         <Link to={'/about'} className="hover:text-pry transition duration-300">
             About
           </Link>
-        <a href="/services" className="hover:text-pry transition duration-300">
+        <Link to={'/services'} className="hover:text-pry transition duration-300">
           Services
-        </a>
+        </Link>
         <a href="#contact" className="hover:text-pry transition duration-300">
           Contact
         </a>

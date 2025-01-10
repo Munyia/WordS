@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const ServicesPage = () => {
   const services = [
@@ -69,7 +70,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <section className="font-merri p-6 mt-24 sm:mt-18 min-h-screen">
+    <section className="font-merri pt-6 mt-24 sm:mt-18 min-h-screen">
     <Header />
     <div className="max-w-screen-xl justify-center mx-auto p-6">
       <div className="text-center mb-12">
@@ -106,6 +107,7 @@ const ServicesPage = () => {
         </Link>
       </div>
     </div>
+    <Footer />
   </section>
   
   );
