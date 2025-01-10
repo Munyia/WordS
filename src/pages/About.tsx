@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 const AboutPage = () => {
   return (
-    <section className="">
+    <section className="no-scrollbar overflow-y-scroll">
       <Header />
       <div className="max-w-screen-xl font-merri p-6 mt-24 sm:mt-18 text-center mx-auto sm:p-10">
         {/* Header Section */}

@@ -41,7 +41,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="font-merri">
+    <div className="font-merri no-scrollbar overflow-y-scroll">
       <Header />
       <header className="p-6 sm:p-8 mt-24 sm:mt-18 text-center">
         <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold">

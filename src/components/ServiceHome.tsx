@@ -9,7 +9,7 @@ import {
 } from "../assets/res";
 
 const ServiceHome: React.FC = () => (
-  <section className="pb-6 bg-sec font-merri text-center">
+  <section className="pb-6 bg-sec font-merri no-scrollbar overflow-y-scroll text-center">
     <div className="py-7 flex justify-center">
       <div className="relative w-[80vw] py-6 border-b-[3px] border-white">
         <h2 className="text-4xl md:text-5xl text-sec1 font-bold font-merri text-center">
