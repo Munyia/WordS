@@ -56,42 +56,36 @@ const Header: React.FC = () => {
       <div className="md:hidden">
         <Hamburger toggled={isOpen} toggle={setIsOpen} size={25} />
       </div>
+{/* Blur Background Overlay for Small Devices */}
+<div
+  className={`fixed top-0 left-0 w-full bg-sec z-40 transition-opacity duration-300 ${
+    isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+  } md:hidden`}
+  onClick={() => setIsOpen(false)}
+></div>
 
-      {/* Blur Background Overlay for Small Devices */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-white/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        } md:hidden`}
-        onClick={() => setIsOpen(false)}
-      ></div>
+{/* Sliding Navigation Links (Small Devices Only) */}
+<div
+  className={`fixed top-0 right-0 w-[50vw] bg-sec text-white shadow-lg z-50 transform transition-transform duration-300 md:hidden ${
+    isOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+  <div className="flex flex-col space-y-6 p-6 text-sm font-semibold">
+    <Link to={"/"} className="hover:text-pry transition duration-300">
+      Home
+    </Link>
+    <Link to={"/about"} className="hover:text-pry transition duration-300">
+      About
+    </Link>
+    <Link to={"/services"} className="hover:text-pry transition duration-300">
+      Services
+    </Link>
+    <a href="#footer" className="hover:text-pry transition duration-300">
+      Contact
+    </a>
+  </div>
+</div>
 
-      {/* Sliding Navigation Links (Small Devices Only) */}
-      <div
-        className={`fixed top-0 right-0 h-full w-[50vw]  shadow-lg z-50 transform transition-transform duration-300 md:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex flex-col space-y-6 p-6 text-sm text-sec font-semibold">
-          <Link to={"/"} className="hover:text-pry transition duration-300">
-            Home
-          </Link>
-          <Link
-            to={"/about"}
-            className="hover:text-pry transition duration-300"
-          >
-            About
-          </Link>
-          <Link
-            to={"/services"}
-            className="hover:text-pry transition duration-300"
-          >
-            Services
-          </Link>
-          <a href="#footer" className="hover:text-pry transition duration-300">
-            Contact
-          </a>
-        </div>
-      </div>
 
       {/* Navigation Links for Larger Devices */}
       <div className="hidden md:flex space-x-4 text-base text-sec font-semibold">

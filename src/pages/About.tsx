@@ -3,21 +3,13 @@ import Footer from "../components/Footer";
 
 const AboutPage = () => {
   return (
-    <section className="no-scrollbar overflow-y-scroll">
+    <section className="no-scrollbar scroll-offset overflow-y-scroll">
       <Header />
       <div className="max-w-screen-xl font-merri p-6 mt-24 sm:mt-18 text-center mx-auto sm:p-10">
         {/* Header Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl text-sec1  sm:text-4xl font-bold ">
-            About Wordsmitters
-          </h1>
-          <p className="text-sm sm:text-lg mt-2">
-            Empowering your stories, ideas, and narratives to inspire the world.
-          </p>
-        </div>
 
         {/* About Section */}
-        <div className="rounded-lg p-4 sm:p-8 shadow mb-10">
+        <div className="rounded-lg p-4 sm:p-8 shadow mb-8">
           <h2 className="text-2xl sm:text-3xl text-sec1 font-bold mb-4">
             Who We Are
           </h2>

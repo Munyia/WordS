@@ -143,45 +143,70 @@ const Home: React.FC = () => {
       </section>
 
       <section className="p-4 sm:p-6 text-center mx-auto max-w-screen-xl border-b-[3px] border-sec1">
-        <h2 className="text-2xl text-sec1 sm:text-2xl font-bold">
-          How It Works
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 my-6">
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">Consultation</h3>
-            <p>
-              Share your vision and let us understand your unique needs and
-              goals.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">Proposal</h3>
-            <p>
-              Receive a customized plan that outlines how we’ll bring your
-              vision to life.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">Creation</h3>
-            <p>
-              We bring your project to life with creativity, expertise, and
-              attention to detail.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">Delivery</h3>
-            <p>
-              Receive work ready to inspire and make an impact in your field.
-            </p>
-          </div>
-        </div>
-        <a
-          href="#footer"
-          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-        >
-          Connect with us
-        </a>
-      </section>
+  <h2 className="text-2xl text-sec1 sm:text-2xl font-bold">How It Works</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 my-6 items-center">
+    <div className="p-4 bg-white shadow rounded-lg relative">
+      <h3 className="text-lg sm:text-lg font-semibold">Consultation</h3>
+      <p>
+        Share your vision and let us understand your unique needs and goals.
+      </p>
+      {/* Arrow for small screens */}
+      <div className="block sm:hidden text-sec1 mt-2 text-2xl">
+        ⬇
+      </div>
+      {/* Arrow for larger screens */}
+      <div className="hidden sm:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-sec1 text-2xl">
+        →
+      </div>
+    </div>
+    <div className="p-4 bg-white shadow rounded-lg relative">
+      <h3 className="text-lg sm:text-lg font-semibold">Proposal</h3>
+      <p>
+        Receive a customized plan that outlines how we’ll bring your vision to
+        life.
+      </p>
+      {/* Arrow for small screens */}
+      <div className="block sm:hidden text-sec1 mt-2 text-2xl">
+        ⬇
+      </div>
+      {/* Arrow for larger screens */}
+      <div className="hidden sm:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-sec1 text-2xl">
+        →
+      </div>
+    </div>
+    <div className="p-4 bg-white shadow rounded-lg relative">
+      <h3 className="text-lg sm:text-lg font-semibold">Creation</h3>
+      <p>
+        We bring your project to life with creativity, expertise, and attention
+        to detail.
+      </p>
+      {/* Arrow for small screens */}
+      <div className="block sm:hidden text-sec1 mt-2 text-2xl">
+        ⬇
+      </div>
+      {/* Arrow for larger screens */}
+      <div className="hidden sm:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-sec1 text-2xl">
+        →
+      </div>
+    </div>
+    <div className="p-4 bg-white shadow rounded-lg relative">
+      <h3 className="text-lg sm:text-lg font-semibold">Delivery</h3>
+      <p>
+        Receive work ready to inspire and make an impact in your field.
+      </p>
+      {/* Arrow for small screens */}
+    </div>
+  </div>
+  <a
+    href="#footer"
+    className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
+  >
+    Connect with us
+  </a>
+</section>
+
+
+      
       <section className=" pb-12 my-8 sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl text-sec font-[verdana] font-bold  mb-8">

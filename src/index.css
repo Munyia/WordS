@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind CSS */
+.scroll-offset {
+  scroll-margin-top: 6rem; /* Adjust based on your header height */
+}
+
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

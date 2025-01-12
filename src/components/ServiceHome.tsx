@@ -18,10 +18,12 @@ const ServiceHome: React.FC = () => (
       </div>
     </div>
 
+  
+
     <div className="grid grid-cols-1 gap-8">
       {/* Writing-Only Services */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-[40vw] mb-5 flex justify-center">
             <img
               className="w-[50%] md:w-[60%] aspect-square rounded-full"
@@ -49,7 +51,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Writing-Only Services */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           {/* Text Section */}
           <div className="w-full md:w-[60vw] px-4 md:px-6 order-last md:order-none">
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
@@ -75,7 +77,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Publishing Services */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-[40vw] mb-5 flex justify-center">
             <img
               className="w-[50%] md:w-[60%] aspect-square rounded-full"
@@ -99,7 +101,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Book Marketing */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           {/* Text Section */}
           <div className="w-full md:w-[60vw] px-4 md:px-6 order-last md:order-none">
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
@@ -124,7 +126,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Editing & Proofreading */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-[40vw] mb-5 flex justify-center">
             <img
               className="w-[50%] md:w-[60%] aspect-square rounded-full"
@@ -136,7 +138,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
               Editing & Proofreading
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-left">
+            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-right">
               <li>
                 In-depth structural editing (e.g., pacing, character
                 development).
@@ -150,7 +152,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Coaching Services */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           {/* Text Section */}
           <div className="w-full md:w-[60vw] px-4 md:px-6 order-last md:order-none">
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
@@ -175,7 +177,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Book Review */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-[40vw] mb-5 flex justify-center">
             <img
               className="w-[50%] md:w-[60%] aspect-square rounded-full"
@@ -187,7 +189,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
               Book Reviews & Critiques
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg">
+            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-right">
               <li>
                 Offering professional book reviews or critiques for authors to{" "}
                 <br /> improve their work before submission or publishing
@@ -199,7 +201,7 @@ const ServiceHome: React.FC = () => (
 
       {/* Formatting Services */}
       <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white flex flex-col md:flex-row justify-between">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
           {/* Text Section */}
           <div className="w-full md:w-[60vw] px-4 md:px-6 order-last md:order-none">
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
