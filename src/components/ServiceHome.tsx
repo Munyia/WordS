@@ -22,8 +22,8 @@ const ServiceHome: React.FC = () => (
 
     <div className="grid grid-cols-1 gap-8">
       {/* Writing-Only Services */}
-      <div className="flex justify-center">
-        <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
+      <div className="flex justify-center ">
+        <div className="w-[95vw] border-b-[3px] border-white sm:p-5  flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-[40vw] mb-5 flex justify-center">
             <img
               className="w-[50%] md:w-[60%] aspect-square rounded-full"
@@ -31,11 +31,11 @@ const ServiceHome: React.FC = () => (
               alt=""
             />
           </div>
-          <div className="w-full md:w-[60vw] px-4 md:px-6 text-left md:text-right">
+          <div className="w-full md:w-[60vw] px-4 md:px-6  text-left md:text-right">
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
               Full-Service (Writing to Publishing)
             </h3>
-            <ul className="list-inside text-white list-disc space-y-3 text-sm md:text-lg">
+            <ul className="list-inside text-white list-disc mb-5 space-y-3 text-sm md:text-lg">
               <li>Complete writing and content creation.</li>
               <li> Editing, formatting, and proofreading.</li>
               <li> ISBN registration and cover design.</li>
@@ -57,7 +57,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
               Writing-Only Services
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-left">
+            <ul className="list-inside list-disc  mb-5 text-white space-y-3 text-sm md:text-lg text-left">
               <li>Content creation and ghostwriting.</li>
               <li>
                 Tailored writing services for novels, articles, and scripts.
@@ -89,7 +89,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
               Publishing-Only Services
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg">
+            <ul className="list-inside  mb-5 list-disc text-white space-y-3 text-sm md:text-lg">
               <li>Manuscript formatting, editing, and proofreading.</li>
               <li>ISBN generation (if applicable).</li>
               <li>Cover design and layout.</li>
@@ -107,7 +107,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
               Book Marketing & Promotion
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-left">
+            <ul className="list-inside  mb-5 list-disc text-white space-y-3 text-sm md:text-lg text-left">
               <li>Social media promotion strategies for authors.</li>
               <li>Press release writing and media outreach.</li>
               <li>Book launch planning and event management.</li>
@@ -138,7 +138,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
               Editing & Proofreading
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-right">
+            <ul className="list-inside  mb-5 list-disc text-white space-y-3 text-sm md:text-lg text-right">
               <li>
                 In-depth structural editing (e.g., pacing, character
                 development).
@@ -158,7 +158,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
               Coaching & Consultation
             </h3>
-            <ul className="list-inside list-disc space-y-3 text-white text-sm md:text-lg text-left">
+            <ul className="list-inside  mb-5 list-disc space-y-3 text-white text-sm md:text-lg text-left">
               <li>One-on-one coaching for aspiring writers.</li>
               <li>Writing workshops and mentorship.</li>
               <li>Publishing guidance and industry insight.</li>
@@ -189,7 +189,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
               Book Reviews & Critiques
             </h3>
-            <ul className="list-inside list-disc text-white space-y-3 text-sm md:text-lg text-right">
+            <ul className="list-inside  mb-5 list-disc text-white space-y-3 text-sm md:text-lg text-right">
               <li>
                 Offering professional book reviews or critiques for authors to{" "}
                 <br /> improve their work before submission or publishing
@@ -207,7 +207,7 @@ const ServiceHome: React.FC = () => (
             <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5 text-left">
               Formatting for E-books and Print
             </h3>
-            <ul className="list-inside list-disc space-y-3 text-white text-lg md:text-lg text-left">
+            <ul className="list-inside  mb-5 list-disc space-y-3 text-white text-sm md:text-lg text-left">
               <li>
                 {" "}
                 Offering specialized formatting for Kindle, EPUB, and other

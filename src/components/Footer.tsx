@@ -64,7 +64,17 @@ const Footer = () => {
 
         {/* Footer Divider */}
         <div className="mt-8 border-t border-white pt-6 text-center">
-          <p className="text-sm">© 2024 Wordsmitters. All rights reserved.</p>
+          <p className="text-sm mb-2">© 2024 Wordsmitters. All rights reserved.</p>
+          <div className="flex text-sm justify-center gap-2 items-center">
+          <p className="flex ">Developed by </p>
+          <a
+              href="mailto:ndidiranjo@gmail.com?"
+              className="hover:text-pry transition"
+              aria-label="Email"
+            >
+              <FaEnvelope size={24} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

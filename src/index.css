@@ -47,4 +47,22 @@ body {
     display: inline-block;
     animation: dance 1s infinite;
   }
+
+
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 5s steps(30) 1 normal forwards;
+  }
   

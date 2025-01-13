@@ -3,13 +3,13 @@ import Footer from "../components/Footer";
 
 const AboutPage = () => {
   return (
-    <section className="no-scrollbar scroll-offset overflow-y-scroll">
+    <section className="no-scrollbar overflow-y-scroll">
       <Header />
       <div className="max-w-screen-xl font-merri p-6 mt-24 sm:mt-18 text-center mx-auto sm:p-10">
-        {/* Header Section */}
+
 
         {/* About Section */}
-        <div className="rounded-lg p-4 sm:p-8 shadow mb-8">
+        <div className="rounded-lg p-4 sm:p-8 shadow mb-10">
           <h2 className="text-2xl sm:text-3xl text-sec1 font-bold mb-4">
             Who We Are
           </h2>
