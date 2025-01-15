@@ -15,6 +15,14 @@ const ServicesPage = () => {
       details: ["Graphic Novels", "Manga", "Comic Strips"],
     },
     {
+      title: "Heartfelt Features",
+      details: [
+        "Custom poems with curated photos capturing unique bonds",
+        "Uniquely titled books reflecting special moments",
+        "Perfect for anniversaries, birthdays, and other occasions",
+        "Personalized wedding brochures with poems, photos, and couple's journey",]
+    },
+    {
       title: "Corporate Writing",
       details: [
         "Business plans and proposals",

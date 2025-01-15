@@ -3,6 +3,7 @@ import {
   edit,
   full,
   ghost,
+  Heart,
   marketing,
   publish,
   review,
@@ -226,6 +227,34 @@ const ServiceHome: React.FC = () => (
           </div>
         </div>
       </div>
+  {/*  HeartScripts Services */}
+      <div className="flex justify-center">
+  <div className="w-[95vw] border-b-[3px] border-white sm:p-5 flex flex-col md:flex-row justify-between">
+    {/* Left Section: Image */}
+    <div className="w-full md:w-[40vw] mb-5 flex justify-center">
+      <img
+        className="w-[50%] md:w-[60%] aspect-square rounded-full"
+        src={Heart}
+        alt="HeartScripts Logo"
+      />
+    </div>
+
+    {/* Right Section: Text Content */}
+    <div className="w-full md:w-[60vw] px-4 md:px-6 text-left md:text-right">
+      <h3 className="text-xl md:text-2xl font-semibold text-black pb-4 md:pb-5">
+       HeartScripts
+      </h3>
+      <ul className="list-inside text-white list-disc mb-5 space-y-3 text-sm md:text-lg">
+  <li>Personalized Poetry Collections: Custom poems with curated photos, capturing your unique bond.</li>
+  <li>Custom Titles and Themes: Uniquely titled books designed to reflect your special moments.</li>
+  <li>Versatile Keepsakes: Perfect for anniversaries, birthdays, valentines, graduations, and more, preserving lasting memories.</li>
+  <li>Wedding Brochures as Keepsakes: Personalized brochures with poems, photos, and the couple’s journey, as a meaningful memento..</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
     </div>
   </section>
 );

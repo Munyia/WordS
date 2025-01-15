@@ -8,7 +8,7 @@ const Scroll = () => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, [pathname]); // Trigger on every route change
 
-  return null; // This component doesn't render anything
+  return null; 
 };
 
 export default Scroll;
