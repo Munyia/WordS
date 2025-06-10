@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      description: 'info@wordsmitters.com',
+      description: 'info@wordsmitters.com.ng',
       subtext: 'We respond within 24 hours'
     },
     {
