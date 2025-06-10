@@ -85,7 +85,7 @@ const Header: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/95 backdrop-blur-md border-t"
+            className="md:hidden  bg-white/95 backdrop-blur-md border-t"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 mt-4 bg-pry text-white rounded-md text-center"
+                className="block px-3 py-2 mt-4 bg-sec1 text-white rounded-md text-center"
               >
                 Get Started
               </Link>

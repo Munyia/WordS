@@ -33,8 +33,8 @@ const Contact: React.FC = () => {
 const serviceCategories = [
   {
     title: 'Writing & Editing',
-    color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
+    color: 'bg-green-200',
+    iconColor: 'text-green-600',
     services: [
       { icon: PenLine, name: 'Ghostwriting', description: 'Professionally writing books, articles, or stories credited to you.' },
       { icon: BookOpen, name: 'Book Writing', description: 'Complete book writing services from ideation to final manuscript.' },
@@ -48,8 +48,8 @@ const serviceCategories = [
   },
   {
     title: 'Corporate & Marketing',
-     color: 'bg-green-100',
-    iconColor: 'text-green-600',
+     color: 'bg-orange-100',
+    iconColor: 'text-orange-600',
     services: [
       { icon: Briefcase, name: 'Business Writing', description: 'Plans, proposals, and formal business documents.' },
       { icon: Building, name: 'Corporate Writing', description: 'Company profiles, internal communications, and reports.' },
@@ -68,8 +68,8 @@ const serviceCategories = [
   },
   {
     title: 'Personal & Miscellaneous',
-     color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
+     color: 'bg-green-200',
+    iconColor: 'text-green-600',
     services: [
       { icon: Mail, name: 'Personal Content', description: 'Tributes, letters, and personalized written pieces.' },
     ],
@@ -217,18 +217,18 @@ const serviceCategories = [
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.03 }}
                className={`group relative px-5 py-8 rounded-xl shadow-sm border hover:shadow-xl transition-all duration-300
-  ${category.title === 'Writing & Editing' ? 'bg-orange-100' :
-    category.title === 'Corporate & Marketing' ? 'bg-green-100' :
+  ${category.title === 'Writing & Editing' ? 'bg-green-100' :
+    category.title === 'Corporate & Marketing' ? 'bg-orange-100' :
     category.title === 'Creative & Visual' ? 'bg-yellow-100' :
-    category.title === 'Personal & Miscellaneous' ? 'bg-orange-100' : ''
+    category.title === 'Personal & Miscellaneous' ? 'bg-green-100' : ''
   }`}
         >
            <div className="flex items-center gap-4 mb-3">
                   <div className={`p-2 rounded-full ${
-  category.title === 'Writing & Editing' ? 'bg-orange-100 text-orange-600 group-hover:bg-orange-600 group-hover:text-white' :
-  category.title === 'Corporate & Marketing' ? 'bg-green-100 text-green-600 group-hover:bg-green-600 group-hover:text-white' :
+  category.title === 'Writing & Editing' ? 'bg-green-100 text-green-600 group-hover:bg-green-600 group-hover:text-white' :
+  category.title === 'Corporate & Marketing' ? 'bg-orange-100 text-orange-600 group-hover:bg-orange-600 group-hover:text-white' :
   category.title === 'Creative & Visual' ? 'bg-yellow-100 text-yellow-600 group-hover:bg-yellow-600 group-hover:text-white' :
-  category.title === 'Personal & Miscellaneous' ? 'bg-orange-100 text-orange-600 group-hover:bg-orange-600 group-hover:text-white' : ''
+  category.title === 'Personal & Miscellaneous' ? 'bg-green-100 text-green-600 group-hover:bg-green-600 group-hover:text-white' : ''
 }`}>
   <service.icon className="w-6 h-6" />
 </div>

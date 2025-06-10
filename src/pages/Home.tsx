@@ -5,7 +5,7 @@ import { ArrowRight, BookOpen, Users, Award } from 'lucide-react';
 // import AnimatedText from '../components/AnimatedText';
 
 const words = ["Ghost Writing", "Publishing", "Editing", "Book Review"];
-const colorClasses = ["text-pry",  "text-sec1", "text-sec", "text-sec1", ];
+const colorClasses = ["text-pry",  "text-sec1", "text-pry", "text-sec",  ];
 
 
 const HomePage: React.FC = () => {
@@ -132,15 +132,7 @@ const HomePage: React.FC = () => {
         </div> */}
 
         {/* Scroll Indicator */}
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2"></div>
-          </div>
-        </motion.div>
+   
       </section>
 
       {/* Stats Section */}

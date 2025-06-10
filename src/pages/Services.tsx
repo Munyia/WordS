@@ -307,7 +307,7 @@ const services = [
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center space-x-2 bg-pry text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-200 group"
+              className="inline-flex items-center space-x-2 bg-sec1 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-200 group"
             >
               <span>Start Your Project</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
