@@ -1,14 +1,17 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const Scroll = () => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [pathname]); // Trigger on every route change
+  useLayoutEffect(() => {
+    // Use setTimeout to allow the new page to mount before scrolling
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }, 0);
+  }, [pathname]);
 
-  return null; 
+  return null;
 };
 
 export default Scroll;

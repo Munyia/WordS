@@ -1,117 +1,119 @@
-import React, { useState, useEffect } from "react";
-import { Twirl as Hamburger } from "hamburger-react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import {lg,  } from '../assets/res';
 
 const Header: React.FC = () => {
-  const [displayedText, setDisplayedText] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
-  const fullText = "WordSmitters";
-  const animationDelay = 500; // 0.5 seconds between letters
-  const stayDuration = 5000; // 5 seconds when the full text is displayed
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>;
-    let currentIndex = 0;
-
-    const animateText = () => {
-      if (currentIndex < fullText.length) {
-        setDisplayedText(fullText.slice(0, currentIndex + 1));
-        currentIndex++;
-        timeout = setTimeout(animateText, animationDelay);
-      } else {
-        timeout = setTimeout(() => {
-          currentIndex = 0;
-          setDisplayedText("");
-          animateText();
-        }, stayDuration);
-      }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    animateText();
-
-    return () => clearTimeout(timeout);
-  }, [fullText]);
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
-    <nav className="p-4 flex font-merri justify-between h-24 items-center fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/30 shadow-md">
-      {/* Logo */}
-      <div>
-        <div className="text-3xl mb-3 text-sec font-bold">
-          {displayedText.split("").map((letter, index) => (
-            <span
-              key={index}
-              className={`dancing-text`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ${
+      scrolled ? 'bg-white shadow-lg' : 'bg-white'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="flex items-center space-x-2">
+           <img className='w-28 ' src={lg} alt="" />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`relative font-medium transition-colors duration-200 ${
+                  location.pathname === item.path
+                    ? 'text-sec1'
+                    : 'text-gray-700 hover:text-sec1'
+                }`}
+              >
+                {item.name}
+                {location.pathname === item.path && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-sec"
+                  />
+                )}
+              </Link>
+            ))}
+            <Link
+              to="/contact"
+              className="bg-sec1 text-white px-6 py-2 rounded-full hover:bg-pry/90 transition-colors duration-200"
             >
-              {letter}
-            </span>
-          ))}
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-pry"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-        <p className="text-sec1 sm:text-sm text-xs pb-2">
-          Expertly Carved Words, Seamlessly Yours
-        </p>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white/95 backdrop-blur-md border-t"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    location.pathname === item.path
+                      ? 'text-sec1 bg-pry/10'
+                      : 'text-gray-700 hover:text-sec1 hover:bg-gray-50'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 mt-4 bg-pry text-white rounded-md text-center"
+              >
+                Get Started
+              </Link>
+            </div>
+          </motion.div>
+        )}
       </div>
-
-      {/* Hamburger Menu */}
-      <div className="md:hidden">
-        <Hamburger toggled={isOpen} toggle={setIsOpen} size={25} />
-      </div>
-{/* Blur Background Overlay for Small Devices */}
-<div
-  className={`fixed top-0 left-0 w-full bg-sec z-40 transition-opacity duration-300 ${
-    isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-  } md:hidden`}
-  onClick={() => setIsOpen(false)}
-></div>
-
-{/* Sliding Navigation Links (Small Devices Only) */}
-<div
-  className={`fixed top-0 right-0 w-[50vw] bg-sec text-white shadow-lg z-50 transform transition-transform duration-300 md:hidden ${
-    isOpen ? "translate-x-0" : "translate-x-full"
-  }`}
->
-  <div className="flex flex-col space-y-6 p-6 text-sm font-semibold">
-    <Link to={"/"} className="hover:text-pry transition duration-300">
-      Home
-    </Link>
-    <Link to={"/about"} className="hover:text-pry transition duration-300">
-      About
-    </Link>
-    <Link to={"/services"} className="hover:text-pry transition duration-300">
-      Services
-    </Link>
-    <Link to={"/contact"} className="hover:text-pry transition duration-300">
-    Contact
-    </Link>
-    {/* <a href="#footer" className="hover:text-pry transition duration-300">
-      Contact
-    </a> */}
-  </div>
-</div>
-
-
-      {/* Navigation Links for Larger Devices */}
-      <div className="hidden md:flex space-x-4 text-base text-sec font-semibold">
-        <Link to={"/"} className="hover:text-pry transition duration-300">
-          Home
-        </Link>
-        <Link to={"/about"} className="hover:text-pry transition duration-300">
-          About
-        </Link>
-        <Link
-          to={"/services"}
-          className="hover:text-pry transition duration-300"
-        >
-          Services
-        </Link>
-        <Link to={"/contact"} className="hover:text-pry transition duration-300">
-    Contact
-    </Link>
-        {/* <a href="#footer" className="hover:text-pry transition duration-300">
-          Contact
-        </a> */}
-      </div>
-    </nav>
+    </motion.nav>
   );
 };
 

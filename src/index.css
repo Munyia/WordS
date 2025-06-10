@@ -1,68 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+  
 
-/* Tailwind CSS */
-.scroll-offset {
-  scroll-margin-top: 6rem; /* Adjust based on your header height */
+html, body {
+  height: 100%;
+  overflow-y: scroll;         /* Allow vertical scrolling */
+  -ms-overflow-style: none;   /* IE 10+ */
+  scrollbar-width: none;      /* Firefox */
 }
 
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Hide the scrollbar while allowing scrolling */
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;
+  display: none;              /* Chrome, Safari */
 }
-
-body {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-
-
-@keyframes dance {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-10px);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-    75% {
-      transform: translateY(-5px);
-    }
-  }
-  
-  .dancing-text {
-    display: inline-block;
-    animation: dance 1s infinite;
-  }
-
-
-  @keyframes typing {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  
-  .typing-effect {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 5s steps(30) 1 normal forwards;
-  }
-  

@@ -1,63 +1,83 @@
-import { useState, useEffect } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import { motion, AnimatePresence } from "framer-motion";
-import Services from "../components/ServiceHome";
-import Carousel from "../components/Carousel";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight, BookOpen, Users, Award } from 'lucide-react';
+// import AnimatedText from '../components/AnimatedText';
 
-const words = ["Ghostwriting", "Publishing", "Editing", "Book Review"];
-const testimonials = [
-  {
-    id: 1,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-k83MyoiH43lpI6Y-TY17A2JCPudD_7Av9A&s",
-    quote: `"I wanted to publish my first novel, and WORDSMITTERS made it possible. The coaching, ghostwriting, and publishing support were beyond my expectations."`,
-    name: "Grace T",
-  },
-  {
-    id: 2,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-k83MyoiH43lpI6Y-TY17A2JCPudD_7Av9A&s",
-    quote: `"WORDSMITTERS' editing and proofreading services took my manuscript to the next level. Their attention to detail is exceptional!"`,
-    name: "Hanatu A ",
-  },
-  {
-    id: 3,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-k83MyoiH43lpI6Y-TY17A2JCPudD_7Av9A&s",
-    quote: `"The marketing strategies from WORDSMITTERS helped me promote my book effectively. The press release writing and social media strategies were spot on."`,
-    name: "Tosin A",
-  },
-];
-const Home: React.FC = () => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+const words = ["Ghost Writing", "Publishing", "Editing", "Book Review"];
+const colorClasses = ["text-pry",  "text-sec1", "text-sec", "text-sec1", ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000); // Change word every 5 seconds
 
-    return () => clearInterval(interval);
-  }, []);
+const HomePage: React.FC = () => {
+   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+      }, 2000); // Change word every 5 seconds
+  
+      return () => clearInterval(interval);
+    }, []);
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '12', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' }
+  ];
+
+  const features = [
+    {
+      icon: BookOpen,
+      title: 'Professional Ghostwriting',
+      description: 'Transform your ideas into compelling narratives with our expert ghostwriting services.'
+    },
+    {
+      icon: Users,
+      title: 'Collaborative Process',
+      description: 'We work closely with you to ensure your voice shines through every word.'
+    },
+    {
+      icon: Award,
+      title: 'Premium Quality',
+      description: 'Every piece is crafted with meticulous attention to detail and professional standards.'
+    }
+  ];
 
   return (
-    <div className="font-merri no-scrollbar overflow-y-scroll">
-      <Header />
-      <header className="p-6 sm:p-8 mt-24 sm:mt-18 text-center">
-        <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold">
+    <div>
+      {/* Hero Section */}
+
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-20 -right-20 w-80 h-80 bg-sec1/20 rounded-full"
+          />
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="absolute -bottom-20 -left-20 w-96 h-96 bg-sec/20 rounded-full"
+          />
+        </div>
+
+          <header className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+   
+        <h1 className="text-5xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-900 mb-6 font-bold">
           <div className="mb-4">Professional</div>
           <div className="relative text-sec1 h-[60px] sm:h-[80px] md:h-[100px] ">
             <AnimatePresence mode="wait">
-              <motion.span
-                key={words[currentWordIndex]}
-                className="absolute left-0 text-sec1 w-full text-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-              >
-                {words[currentWordIndex]}
-              </motion.span>
+            <motion.span
+  key={words[currentWordIndex]}
+  className={`absolute left-0 w-full text-center ${colorClasses[currentWordIndex % colorClasses.length]}`}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 1 }}
+>
+  {words[currentWordIndex]}
+</motion.span>
+
             </AnimatePresence>
           </div>
           <div className="">Services</div>
@@ -68,182 +88,159 @@ const Home: React.FC = () => {
           We specialize in crafting words that resonate, <br />
           ensuring your message is both powerful and memorable. <br />
         </p>
-        <a
-          href="#footer"
-          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-        >
-          Connect with us
-        </a>
       </header>
 
-      <Services />
+        {/* <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6">
+              Your Voice.
+              <br />
+              <span className="text-pry">Our Words.</span>
+              <br />
+              <AnimatedText text="Shared with the World." className="text-sec" />
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Premium ghostwriting and content creation services that transform your ideas into compelling narratives.
+            </p>
+          </motion.div>
 
-      <section className="p-4 sm:p-6 text-center mt-8 mx-auto max-w-screen-xl border-b-[3px] border-t-[3px] border-sec1">
-        <h2 className="text-2xl text-sec1 sm:text-2xl font-bold">
-          Why Choose Us?
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6">
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">Expert Writers</h3>
-            <p>
-              Seasoned professionals in various writing domains, delivering
-              high-quality content.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">
-              Affordable Pricing
-            </h3>
-            <p>
-              Top-notch services tailored to your budget, without compromising
-              quality.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">
-              Timely Delivery
-            </h3>
-            <p>
-              Your projects delivered when you need them, with strict adherence
-              to deadlines.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">
-              Confidentiality Guaranteed
-            </h3>
-            <p>
-              Your privacy is our priority. We ensure all projects are handled
-              with strict confidentiality.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">
-              Tailored to Your Voice
-            </h3>
-            <p>
-              We craft every project to reflect your unique style and tone,
-              making it truly yours.
-            </p>
-          </div>
-          <div className="p-4 bg-white shadow rounded-lg">
-            <h3 className="text-lg sm:text-lg font-semibold">Proven Results</h3>
-            <p>
-              Our expert writers have a track record of delivering exceptional
-              content that achieves results.
-            </p>
-          </div>
-        </div>
-        <a
-          href="#footer"
-          className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center space-x-2 bg-sec1  text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-pry/90 transition-all duration-200 group"
+            >
+              <span>Start Your Story</span>
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center space-x-2 border-2 border-pry text-sec px-8 py-4 rounded-full text-lg font-medium hover:bg-sec hover:text-white transition-all duration-200"
+            >
+              <span>View Our Work</span>
+            </Link>
+          </motion.div>
+        </div> */}
+
+        {/* Scroll Indicator */}
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          Connect with us
-        </a>
+          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2"></div>
+          </div>
+        </motion.div>
       </section>
 
-      <section className="p-4 sm:p-6 text-center mx-auto max-w-screen-xl border-b-[3px] border-sec1">
-  <h2 className="text-2xl text-sec1 sm:text-2xl font-bold">How It Works</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 my-6 items-center">
-    <div className="p-4 bg-white shadow rounded-lg relative">
-      <h3 className="text-lg sm:text-lg font-semibold">Consultation</h3>
-      <p>
-        Share your vision and let us understand your unique needs and goals.
-      </p>
-      {/* Arrow for small screens */}
-      <div className="block sm:hidden text-sec1 mt-2 text-2xl">
-        ⬇
+      {/* Stats Section */}
+ <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-20 gap-y-16">
+        {stats.map((stat, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="text-center min-w-[140px]"
+          >
+            <div className="text-4xl md:text-5xl font-serif font-bold text-sec1 mb-3">
+              {stat.number}
+            </div>
+            <p className="text-gray-600 text-base">{stat.label}</p>
+          </motion.div>
+        ))}
       </div>
-      {/* Arrow for larger screens */}
-      <div className="hidden sm:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-sec1 text-2xl">
-        →
-      </div>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg relative">
-      <h3 className="text-lg sm:text-lg font-semibold">Proposal</h3>
-      <p>
-        Receive a customized plan that outlines how we’ll bring your vision to
-        life.
-      </p>
-      {/* Arrow for small screens */}
-      <div className="block sm:hidden text-sec1 mt-2 text-2xl">
-        ⬇
-      </div>
-      {/* Arrow for larger screens */}
-      <div className="hidden sm:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-sec1 text-2xl">
-        →
-      </div>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg relative">
-      <h3 className="text-lg sm:text-lg font-semibold">Creation</h3>
-      <p>
-        We bring your project to life with creativity, expertise, and attention
-        to detail.
-      </p>
-      {/* Arrow for small screens */}
-      <div className="block sm:hidden text-sec1 mt-2 text-2xl">
-        ⬇
-      </div>
-      {/* Arrow for larger screens */}
-      <div className="hidden sm:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-sec1 text-2xl">
-        →
-      </div>
-    </div>
-    <div className="p-4 bg-white shadow rounded-lg relative">
-      <h3 className="text-lg sm:text-lg font-semibold">Delivery</h3>
-      <p>
-        Receive work ready to inspire and make an impact in your field.
-      </p>
-      {/* Arrow for small screens */}
     </div>
   </div>
-  <a
-    href="#footer"
-    className="inline-block mt-6 bg-sec1 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-pry"
-  >
-    Connect with us
-  </a>
+</section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-sec/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose <span className="text-pry">Wordsmitters</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine creativity, expertise, and collaboration to deliver exceptional content that resonates with your audience.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-pry/40 rounded-full flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-sec" />
+                </div>
+                <h3 className="font-serif text-2xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+
+      {/* Services Preview Section */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Explore Our <span className="text-pry">Creative Services</span>
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+        From ghostwriting to corporate branding, we deliver personalized content that connects, compels, and converts.
+      </p>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto opacity-90">
+              Let's work together to create compelling content that captures your unique voice and engages your audience.
+            </p>
+      <Link
+        to="/services"
+        className="inline-flex items-center space-x-2 bg-sec1 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-pry/90 transition-all duration-200 group"
+      >
+        <span>View All Services</span>
+        <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+      </Link>
+    </motion.div>
+  </div>
 </section>
 
 
-      
-      <section className=" pb-12 my-8 sm:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl text-sec font-[verdana] font-bold  mb-8">
-            What Our Clients Say
-          </h2>
-
-          {/* Carousel for testimonials */}
-          <div className="w-full py-5 rounded-3xl ">
-            <Carousel autoslide={true} autoslideinterval={5000}>
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.id}
-                  className="flex flex-col items-center"
-                >
-                  <img
-                    src={testimonial.image}
-                    alt={`Customer ${testimonial.name}`}
-                    className="w-16 h-16 object-cover overflow-hidden rounded-full mb-4 shadow-md" // Customer image
-                  />
-                  <p className="text-base text-sec italic  ">
-                    "{testimonial.quote}"
-                  </p>{" "}
-                  {/* Customer quote */}
-                  <p className="font-semibold pb-10 text-sec1">
-                    {testimonial.name}
-                  </p>{" "}
-                  {/* Customer name and location */}
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
