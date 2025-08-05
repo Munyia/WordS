@@ -12,8 +12,13 @@ import wg from "./wg.png"
 import lg from "./lg.png"
 import ye from "./ye.png"
 import gr from "./gr.png"
+import ass from "./ass.png"
+import pf from "./pf.png"
+import wss from "./wss.png"
+import hf from "./hf.png"
+import bbbb from "./bbbb.png"
 
 export {marketing, ghost, edit, publish, coach, review, format, ghost2, full, Heart,
-    wg, lg, ye, gr
+    wg, lg, ye, gr, ass, pf, wss, hf, bbbb
 
 }

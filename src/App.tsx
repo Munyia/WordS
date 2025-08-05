@@ -8,10 +8,27 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Layout from './components/Layout';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ForceScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 100);
+  }, [pathname]);
+
+  return null;
+};
+
 
 function App() {
   return (
     <BrowserRouter>
+  <ForceScrollToTop />
       <Layout>
         <Routes>
           <Route path='/' element={<Home />} />

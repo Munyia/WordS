@@ -14,3 +14,24 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;              /* Chrome, Safari */
 }
+
+@keyframes marquee-alt {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-alt {
+  animation: marquee-alt 35s linear infinite;
+  will-change: transform;
+}
+
+
+.animate-marquee-alt:hover {
+  animation-play-state: paused;
+}
+
+

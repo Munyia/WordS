@@ -165,37 +165,47 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Services */}
-            <div className="md:col-span-2">
-              <h3 className="font-semibold text-sec1 text-lg mb-4 text-left">
-                Services
-              </h3>
-              <div className="grid grid-cols-1 justify-between sm:grid-cols-2 gap-y-3 gap-x-6 text-sm">
-                {[
-                  "Ghostwriting",
-                  "Book Writing",
-                  "Graphic & Visual Storytelling",
-                  "Heartfelt Features",
-                  "Corporate Writing",
-                  "Content Writing",
-                  "Speechwriting",
-                  "Academic & Research Writing",
-                  "Editing & Proofreading",
-                  "Creative Writing",
-                  "Personal Content",
-                  "Marketing & Copywriting",
-                  "SEO Writing",
-                ].map((service, index) => (
-                  <Link
-                    to="/services"
-                    key={index}
-                    className="text-white hover:text-sec1 transition block"
-                  >
-                    {service}
-                  </Link>
-                ))}
-              </div>
-            </div>
+         {/* Services */}
+<div className="md:col-span-2">
+  <h3 className="font-semibold text-sec1 text-lg mb-4 text-left">
+    Services
+  </h3>
+  <div className="grid grid-cols-1 justify-between sm:grid-cols-2 gap-y-3 gap-x-6 text-sm">
+    {[
+      // Writing Services
+      "Ghostwriting",
+      "Book Writing",
+      "Graphic & Visual Storytelling",
+      "Heartfelt Features",
+      "Corporate Writing",
+      "Content Writing",
+      "Speechwriting",
+      "Academic & Research Writing",
+      "Editing & Proofreading",
+      "Creative Writing",
+      "Personal Content",
+      "Marketing & Copywriting",
+      "SEO Writing",
+
+      // Tech Services
+      "Web Development",
+      "Mobile App Development",
+      "UI/UX Design",
+      "Security Implementation",
+      "Performance Optimization",
+      "E-commerce Solutions",
+    ].map((service, index) => (
+      <Link
+        to="/services"
+        key={index}
+        className="text-white hover:text-sec1 transition block"
+      >
+        {service}
+      </Link>
+    ))}
+  </div>
+</div>
+
           </div>
 
           {/* Footer Bottom */}

@@ -5,10 +5,7 @@ const Scroll = () => {
   const { pathname } = useLocation();
 
   useLayoutEffect(() => {
-    // Use setTimeout to allow the new page to mount before scrolling
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, 0);
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;

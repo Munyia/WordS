@@ -12,11 +12,19 @@ import {
   BookOpenCheck,
   PenTool,
   Heart,
+  MonitorSmartphone,
+  Server,
+  Code2,
+  BarChart3,
+  ExternalLink,
 } from "lucide-react";
+import { ass, bbbb, hf, pf, wss } from "../assets/res";
 
 const Portfolio: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [filter, ] = useState('All');
 
+  
   const testimonials = [
     {
       quote:
@@ -155,7 +163,47 @@ const Portfolio: React.FC = () => {
       "Meaningful letters, obituaries, and essays crafted to express personal sentiments and reflections.",
     metrics: "100% approval rate from clients",
     icon: Mail,
-  }
+  },
+    {
+    title: "Full-Stack Web Development",
+    category: "Web Development",
+    color: 'bg-green-200',
+    iconColor: 'text-green-600',
+    description:
+      "Custom-built websites and dashboards using modern stacks like React, Node.js, and MongoDB.",
+    metrics: "15+ enterprise and personal apps deployed",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "API & Backend Services",
+    category: "Backend Engineering",
+    color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
+    description:
+      "RESTful API and server-side logic to power applications at scale using Express and Node.",
+    metrics: "Secured 25k+ API calls/month",
+    icon: Server,
+  },
+  {
+    title: "Mobile-First UI/UX",
+    category: "Frontend Design",
+    color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
+    description:
+      "Responsive interfaces optimized for performance, accessibility, and seamless user experience.",
+  metrics: "Tested across mobile, tablet, and desktop resolutions",
+    icon: Code2,
+  },
+  {
+    title: "SEO & Performance Optimization",
+    category: "Tech Optimization",
+    color: 'bg-green-200',
+    iconColor: 'text-green-600',
+    description:
+      "Technical SEO, lazy loading, and code splitting to boost page speed and visibility.",
+    metrics: "Reduced load times by 60%",
+    icon: BarChart3,
+  },
 ];
 
 const industries = [
@@ -172,6 +220,100 @@ const industries = [
   { name: "Retail", bg: "bg-teal-100", text: "text-teal-700" },
   { name: "Hospitality", bg: "bg-rose-100", text: "text-rose-700" },
 ];
+
+const allProjects = [
+  {
+      id: 1,
+      title: "AsterCart E-Commerce Platform",
+      description:
+        "A comprehensive e-commerce supermarket store with admin dashboard. Full-stack application allowing store admins to manage inventory, track sales, and handle customer data efficiently.",
+      longDescription:
+        "Built a complete e-commerce platform for AsterCart, featuring both customer-facing store and comprehensive admin dashboard. The platform handles product catalog management, user roles, order tracking, and payment integration with a focus on scalability and user experience.",
+      image: ass,
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+      ],
+      liveUrl: "https://astercart.com",
+      category: "fullstack",
+    },
+    {
+      id: 2,
+      title: "PrinceFynn Medicals E-Commerce",
+      description:
+        "E-commerce platform for selling health supplements with Supabase backend, React frontend, and TypeScript for type safety. Features product catalog, shopping cart, and secure checkout.",
+      longDescription:
+        "Developed a modern e-commerce platform for PrinceFynn Medicals specializing in health supplements. Built with React, TypeScript, and Supabase for a robust, scalable solution with real-time data management and secure user authentication.",
+      image: pf,
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Supabase",
+        "Tailwind CSS",
+        "Real-time DB",
+        "flutterwave",
+      ],
+      liveUrl: "https://princefynnmedical.com",
+      category: "fullstack",
+    },
+    {
+      id: 3,
+      title: "WordSmitters - Ghostwriting Platform",
+      description:
+        "Web application connecting users with ghostwriters for book writing, publishing, and editing services. Frontend-focused platform showcasing services and enabling social media interaction.",
+      longDescription:
+        "Developed WordSmitters, a platform that bridges the gap between aspiring authors and professional ghostwriters. The application showcases available writing services, facilitates connections, and provides social media integration for community building.",
+      image: wss,
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "Social Media APIs",
+        "Responsive Design",
+        "SEO Optimization",
+      ],
+      liveUrl: "https://www.wordsmitters.com.ng",
+      category: "frontend",
+      featured: false,
+    },
+    {
+      id: 4,
+      title: "Halimafactor Community Initiatives",
+      description:
+        "NGO platform to help the poor with medical assistance. Built with MERN stack and SEO optimization to maximize reach and impact for community health initiatives.",
+      longDescription:
+        "Created a comprehensive platform for Halimafactor Community Initiatives NGO, focusing on providing medical assistance to underserved communities. The platform features donation management, volunteer coordination, and impact tracking with SEO optimization for maximum visibility.",
+      image: hf,
+      technologies: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "SEO Optimization",
+      ],
+      liveUrl: "https://www.halimafactorcommunityinitiative.com.ng",
+      category: "fullstack",
+    },
+
+    {
+      id: 5,
+      title: "BayBook - Author Publishing Platform",
+      description:
+        "Currently in development: Web application for writers to publish works, manage editing and revisions, and connect with readers through integrated social media features.",
+      longDescription:
+        "BayBook is an ambitious project currently in development, designed to be a comprehensive platform for authors. It will feature publishing tools, revision management, reader engagement, and social media integration to create a complete ecosystem for writers and readers.",
+      image: bbbb,
+      technologies: ["React.js", "Node.js", "MongoDB", "Social Media APIs"],
+      category: "fullstack",
+    },
+];
+
+
+
+const filteredProjects =
+    filter === 'All' ? allProjects : allProjects.filter(p => p.category === filter);
 
 
   const nextTestimonial = () => {
@@ -215,7 +357,7 @@ const industries = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-pry/10 to-sec/10 p-8 rounded-2xl text-center"
+            className="bg-sec/10 p-8 rounded-2xl text-center"
           >
             <Shield className="w-16 h-16 text-sec1 mx-auto mb-6" />
             <h2 className="font-serif text-3xl font-bold text-gray-900 mb-4">
@@ -233,7 +375,7 @@ const industries = [
       </section>
 
       {/* Project Types */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-sec/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -273,7 +415,7 @@ const industries = [
       </div>
 
       {/* Title & Description */}
-      <h3 className="font-serif text-xl font-semibold text-gray-900 mb-3">
+      <h3 className="font-serif text-base  text-gray-900 mb-3">
         {project.title}
       </h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
@@ -287,6 +429,72 @@ const industries = [
 </div>
     </div>
       </section>
+
+       <section className="py-12 px-4 max-w-7xl mx-auto">
+      <div className="mb-8 flex flex-wrap justify-center">
+       
+            <p className="px-4 py-2 rounded-full border bg-sec/20 text-base  font-medium transition duration-200 ">Web/Applications</p>
+    
+      </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {filteredProjects.map((project, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="bg-white rounded-2xl border shadow-sm hover:shadow-lg overflow-hidden transition-all duration-300"
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-48 object-cover"
+      />
+
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium px-3 py-1 bg-pry/10 text-pry rounded-full">
+            {project.category}
+          </span>
+   <a
+  href={project.liveUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 text-sm font-medium text-sec hover:underline"
+>
+  <ExternalLink className="w-4 h-4" />
+  <span>Visit Website</span>
+</a>
+
+
+        </div>
+
+        <h3 className="font-serif text-xl font-semibold text-gray-900 mb-2">
+          {project.title}
+        </h3>
+        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+          {project.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2 text-xs text-gray-500 mb-4">
+          {project.technologies.map((tech, i) => (
+            <span
+              key={i}
+              className="px-2 py-1 bg-gray-100 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+      </div>
+    </motion.div>
+  ))}
+</div>
+
+    </section>
 
       {/* Testimonials Carousel */}
       <section className="py-20 bg-white">

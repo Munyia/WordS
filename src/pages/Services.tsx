@@ -17,10 +17,15 @@ import {
   PencilLine,
   Mail,
   Megaphone,
+  Monitor,
+  Smartphone,
+  LayoutDashboard,
+  ShieldCheck,
+  Zap,
+  ShoppingCart,
 } from 'lucide-react';
 
 const Services: React.FC = () => {
-
 
 const services = [
   {
@@ -28,94 +33,156 @@ const services = [
     title: 'Ghostwriting',
     description: 'Transform your ideas into compelling narratives with our expert ghostwriting services.',
     features: ['Fiction (novels, short stories)', 'Non-fiction (memoirs, biographies, self-help books)', 'Speeches & Presentations', 'Thought Leadership'],
-    color: 'pry',
+  color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
   },
   {
     icon: BookOpen,
     title: 'Book Writing',
     description: 'From concept to completion, we help bring your book ideas to life.',
     features: ['Non-fiction Books', 'Business Books', 'Autobiographies', 'Industry Guides'],
-    color: 'sec',
+    color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
   },
   {
     icon: Image,
     title: 'Graphic and Visual Storytelling',
     description: 'Bring your stories to life visually with our graphic novel and manga creation services.',
     features: ['Graphic Novels', 'Manga', 'Comic Strips'],
-    color: 'sec1',
+  color: 'bg-green-200',
+    iconColor: 'text-green-600',
   },
   {
     icon: Heart,
     title: 'Heartfelt Features',
     description: 'Capture emotions with bespoke poetic and visual keepsakes for special occasions.',
     features: ['Custom Poems with Photos', 'Uniquely Titled Books', 'Wedding Brochures', 'Celebration Keepsakes'],
-    color: 'pry',
+  color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
   },
   {
     icon: Briefcase,
     title: 'Corporate Writing',
     description: 'Professional writing that reflects your brand’s voice and supports business goals.',
     features: ['Business Plans', 'Reports & Whitepapers', 'Corporate Profiles', 'Branding Content'],
-    color: 'sec',
+  color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
   },
   {
     icon: FileText,
     title: 'Content Writing',
     description: 'Engaging content that connects with your audience and drives meaningful results.',
     features: ['Articles and Blogs', 'Website Copywriting', 'Product Descriptions', 'Newsletters'],
-    color: 'sec1',
+    color: 'bg-green-200',
+    iconColor: 'text-green-600',
   },
   {
     icon: MessageSquareText,
     title: 'Speechwriting',
     description: 'Deliver powerful speeches tailored for any occasion with our expert writing support.',
     features: ['Keynote Addresses', 'Wedding & Special Occasion Speeches', 'Political & Corporate Speeches'],
-    color: 'pry',
+     color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
   },
   {
     icon: GraduationCap,
     title: 'Academic and Research Writing',
     description: 'Well-researched academic content that meets institutional standards and requirements.',
     features: ['Research Papers', 'Theses', 'Case Studies', 'Educational Materials'],
-    color: 'sec',
+ color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
   },
   {
     icon: Edit,
     title: 'Editing & Proofreading',
     description: 'Polish your content to perfection with detailed editing and professional review.',
     features: ['Manuscripts', 'Resumes & Cover Letters', 'Academic Papers', 'Content Consistency'],
-    color: 'sec1',
+ color: 'bg-green-200',
+    iconColor: 'text-green-600',
   },
   {
     icon: PencilLine,
     title: 'Creative Writing',
     description: 'Original creative work crafted with imagination and flair for various formats.',
     features: ['Screenplays & Scripts', 'Poetry & Song Lyrics', 'Advertisements & Jingles'],
-    color: 'pry',
+    color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
   },
   {
     icon: Mail,
     title: 'Personal Content',
     description: 'Meaningful writing for personal use that reflects your voice and intentions.',
     features: ['Letters & Emails', 'Obituaries & Tributes', 'Personal Essays'],
-    color: 'sec',
+     color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
   },
   {
     icon: Megaphone,
     title: 'Marketing and Copywriting',
     description: 'Conversion-focused content that drives engagement and business growth.',
     features: ['Sales Copy', 'Social Media Content', 'Email Campaigns & Newsletters'],
-    color: 'sec1',
+ color: 'bg-green-200',
+    iconColor: 'text-green-600',
   },
   {
     icon: Search,
     title: 'SEO Writing',
     description: 'Content optimized for search engines without compromising on quality and readability.',
     features: ['SEO Articles', 'Keyword Research', 'Meta Descriptions', 'Content Strategy'],
-    color: 'pry',
+   color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
+  },
+
+  // TECH SERVICES
+  {
+    icon: Monitor,
+    title: 'Web Development',
+    description: 'Build scalable and responsive websites using modern tech stacks tailored to your goals.',
+    features: ['Frontend & Backend', 'MERN Stack', 'API Integration', 'CMS & Admin Panels'],
+    color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile App Development',
+    description: 'Cross-platform mobile apps designed for performance, usability, and growth.',
+    features: ['React Native', 'Flutter', 'Android & iOS', 'Custom Features'],
+     color: 'bg-green-200',
+    iconColor: 'text-green-600',
+  },
+  {
+    icon: LayoutDashboard,
+    title: 'UI/UX Design',
+    description: 'User-focused design for intuitive and engaging experiences across devices.',
+    features: ['Wireframes & Prototypes', 'Design Systems', 'Mobile-first Interfaces', 'Accessibility'],
+  color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Security Implementation',
+    description: 'Secure your platforms with modern protocols, encryption, and validation.',
+    features: ['JWT Authentication', 'Data Encryption', 'Input Validation', 'HTTPS Setup'],
+     color: 'bg-yellow-200',
+    iconColor: 'text-yellow-600',
+  },
+  {
+    icon: Zap,
+    title: 'Performance Optimization',
+    description: 'Improve speed, SEO, and responsiveness through expert performance tuning.',
+    features: ['Code Splitting', 'Lazy Loading', 'Caching', 'Bundle Optimization'],
+ color: 'bg-green-200',
+    iconColor: 'text-green-600',
+  },
+  {
+    icon: ShoppingCart,
+    title: 'E-commerce Solutions',
+    description: 'Custom online stores built with integrated payments and full order management.',
+    features: ['Payment Gateways', 'Inventory Tracking', 'User Dashboard', 'Order Processing'],
+     color: 'bg-orange-200',
+    iconColor: 'text-orange-600',
   },
 ];
-
 
   const process = [
     {
@@ -140,18 +207,7 @@ const services = [
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    switch (color) {
-      case 'pry':
-        return 'text-pry bg-pry/10 border-pry/20';
-      case 'sec':
-        return 'text-sec bg-sec/10 border-sec/20';
-      case 'sec1':
-        return 'text-sec1 bg-sec1/10 border-sec1/20';
-      default:
-        return 'text-pry bg-pry/10 border-pry/20';
-    }
-  };
+
 
   return (
     <div>
@@ -176,33 +232,41 @@ const services = [
       </section>
 
       {/* Services Grid */}
-      <section className="py-5 bg-sec/5">
+      <section className="py-10 bg-sec/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-white my-5 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border "
-              >
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${getColorClasses(service.color)}`}>
-                  <service.icon className="w-8 h-8" />
-                </div>
-                <h3 className="font-serif text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+            <motion.div
+  key={index}
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: index * 0.1 }}
+  viewport={{ once: true }}
+  whileHover={{ y: -5 }}
+  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+>
+  {/* Title badge and icon */}
+  <div className="flex items-center justify-between mb-4">
+    <h3 className={`font-serif text-base px-3 py-1 rounded-full text-gray-900 ${service.color}`}>
+      {service.title}
+    </h3>
+    <service.icon className={`w-6 h-6 ${service.iconColor}`} />
+  </div>
+
+  {/* Description */}
+  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+
+  {/* Features list */}
+  <ul className="space-y-2">
+    {service.features.map((feature, featureIndex) => (
+      <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-600">
+        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+        <span>{feature}</span>
+      </li>
+    ))}
+  </ul>
+</motion.div>
+
             ))}
           </div>
         </div>
