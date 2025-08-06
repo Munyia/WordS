@@ -131,9 +131,9 @@ const features = [
           {[...techServices, ...techServices].map((item, idx) => (
             <div
               key={idx}
-              className={`flex items-center gap-2 sm:gap-3 text-2xl sm:text-2xl md:text-2xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
+              className={`flex font-serif items-center gap-2 sm:gap-3 text-2xl sm:text-2xl md:text-2xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
             >
-              <span className="text-2xl sm:text-3xl md:text-4xl">{item.icon}</span>
+              <span className="text-2xl sm:text-2xl md:text-3xl">{item.icon}</span>
               <span className="whitespace-nowrap">{item.label}</span>
             </div>
           ))}
