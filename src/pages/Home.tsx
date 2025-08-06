@@ -103,7 +103,7 @@ const features = [
 
   {/* Header Content */}
   <header className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 font-bold leading-tight mb-6">
+    <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 font-bold leading-tight mb-6">
       <div className="mb-2 sm:mb-4">Professional</div>
 
       {/* Animated Word */}
@@ -111,7 +111,7 @@ const features = [
         <AnimatePresence mode="wait">
           <motion.span
             key={words[currentWordIndex]}
-            className={`absolute left-0 right-0 w-full text-center text-3xl sm:text-4xl md:text-5xl font-bold ${colorClasses[currentWordIndex % colorClasses.length]}`}
+            className={`absolute left-0 right-0 w-full text-center text-4xl sm:text-4xl md:text-5xl font-bold ${colorClasses[currentWordIndex % colorClasses.length]}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -128,7 +128,7 @@ const features = [
           {[...techServices, ...techServices].map((item, idx) => (
             <div
               key={idx}
-              className={`flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
+              className={`flex items-center gap-2 sm:gap-3 text-2xl sm:text-2xl md:text-2xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
             >
               <span className="text-2xl sm:text-3xl md:text-4xl">{item.icon}</span>
               <span className="whitespace-nowrap">{item.label}</span>
@@ -137,7 +137,7 @@ const features = [
         </div>
       </div>
 
-      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">Services</div>
+      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Services</div>
     </h1>
 
     {/* Description Paragraph */}
