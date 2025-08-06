@@ -86,108 +86,71 @@ const features = [
     <div>
       {/* Hero Section */}
 
-      <section className="relative pt-6 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-20 -right-20 w-80 h-80 bg-sec1/20 rounded-full"
-          />
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-            className="absolute -bottom-20 -left-20 w-96 h-96 bg-sec/20 rounded-full"
-          />
-        </div>
-
-          <header className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-   
-        <h1 className="text-5xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-900 mb-6 font-bold">
-          <div className="mb-4">Professional</div>
-          <div className="relative text-sec1 h-[60px] sm:h-[80px] md:h-[100px] ">
-            <AnimatePresence mode="wait">
-            <motion.span
-  key={words[currentWordIndex]}
-  className={`absolute left-0 w-full text-center ${colorClasses[currentWordIndex % colorClasses.length]}`}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }}
-  transition={{ duration: 1 }}
->
-  {words[currentWordIndex]}
-</motion.span>
-
-            </AnimatePresence>
-          </div>
-<div className="relative w-full overflow-hidden py-3 sm:py-4">
-  <div className="animate-marquee-alt flex w-max space-x-10 sm:space-x-16 px-4">
-    {[...techServices, ...techServices].map((item, idx) => (
-      <div
-        key={idx}
-        className={`flex font-serif items-center gap-2 sm:gap-3 text-base sm:text-xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
-      >
-        <span className="text-2xl sm:text-3xl">{item.icon}</span>
-        <span className="whitespace-nowrap ">{item.label}</span>
-      </div>
-    ))}
+<section className="relative py-16 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+  {/* Background Blobs */}
+  <div className="absolute inset-0 z-0">
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      className="absolute -top-32 -right-32 w-72 h-72 sm:w-80 sm:h-80 bg-sec1/20 rounded-full"
+    />
+    <motion.div
+      animate={{ rotate: -360 }}
+      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+      className="absolute -bottom-32 -left-32 w-80 h-80 sm:w-96 sm:h-96 bg-sec/20 rounded-full"
+    />
   </div>
-</div>
 
-          <div className="">Services</div>
-        </h1>
-       <p className="mt-4 px-5 text-base sm:text-xl md:text-2xl">
-  Transform your ideas into compelling stories, powerful visuals, and functional digital products with Wordsmitters. <br />
-  From ghostwriting and publishing to web development and mobile apps, <br />
-  we craft words, designs, and code that resonate — ensuring your message is clear, engaging, and unforgettable. <br />
-</p>
+  {/* Header Content */}
+  <header className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 font-bold leading-tight mb-6">
+      <div className="mb-2 sm:mb-4">Professional</div>
 
-      </header>
-
-        {/* <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
+      {/* Animated Word */}
+      <div className="relative h-[50px] sm:h-[70px] md:h-[90px] text-sec1 overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={words[currentWordIndex]}
+            className={`absolute left-0 right-0 w-full text-center text-3xl sm:text-4xl md:text-5xl font-bold ${colorClasses[currentWordIndex % colorClasses.length]}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
           >
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6">
-              Your Voice.
-              <br />
-              <span className="text-pry">Our Words.</span>
-              <br />
-              <AnimatedText text="Shared with the World." className="text-sec" />
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Premium ghostwriting and content creation services that transform your ideas into compelling narratives.
-            </p>
-          </motion.div>
+            {words[currentWordIndex]}
+          </motion.span>
+        </AnimatePresence>
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              to="/contact"
-              className="inline-flex items-center space-x-2 bg-sec1  text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-pry/90 transition-all duration-200 group"
+      {/* Marquee */}
+      <div className="relative w-full overflow-hidden py-2 sm:py-4">
+        <div className="animate-marquee-alt flex w-max space-x-10 sm:space-x-16 px-4">
+          {[...techServices, ...techServices].map((item, idx) => (
+            <div
+              key={idx}
+              className={`flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
             >
-              <span>Start Your Story</span>
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center space-x-2 border-2 border-pry text-sec px-8 py-4 rounded-full text-lg font-medium hover:bg-sec hover:text-white transition-all duration-200"
-            >
-              <span>View Our Work</span>
-            </Link>
-          </motion.div>
-        </div> */}
+              <span className="text-2xl sm:text-3xl md:text-4xl">{item.icon}</span>
+              <span className="whitespace-nowrap">{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
-        {/* Scroll Indicator */}
-   
-      </section>
+      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">Services</div>
+    </h1>
+
+    {/* Description Paragraph */}
+    <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 px-4 sm:px-6 md:px-8 max-w-3xl mx-auto leading-relaxed">
+      Transform your ideas into compelling stories, powerful visuals, and functional digital products with Wordsmitters.
+      <br className="hidden sm:block" />
+      From ghostwriting and publishing to web development and mobile apps,
+      <br className="hidden sm:block" />
+      we craft words, designs, and code that resonate — ensuring your message is clear, engaging, and unforgettable.
+    </p>
+  </header>
+</section>
+
 
       {/* Stats Section */}
  <section className="py-20 bg-white">
