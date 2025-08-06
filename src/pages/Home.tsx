@@ -103,6 +103,9 @@ const features = [
 
   {/* Header Content */}
   <header className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    {/* <h2 className="absolute text-[80px] sm:text-[120px] font-bold text-gray-200 z-0 top-20 left-1/2 transform -translate-x-1/2 pointer-events-none select-none">
+    wordsmitters
+  </h2> */}
     <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 font-bold leading-tight mb-6">
       <div className="mb-2 sm:mb-4">Professional</div>
 

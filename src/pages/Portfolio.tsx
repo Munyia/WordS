@@ -5,20 +5,20 @@ import {
   ChevronLeft,
   ChevronRight,
   Shield,
-  Users,
-  TrendingUp,
-  Mail,
-  PencilLine,
-  BookOpenCheck,
-  PenTool,
-  Heart,
-  MonitorSmartphone,
-  Server,
-  Code2,
-  BarChart3,
+  // Users,
+  // TrendingUp,
+  // Mail,
+  // PencilLine,
+  // BookOpenCheck,
+  // PenTool,
+  // Heart,
+  // MonitorSmartphone,
+  // Server,
+  // Code2,
+  // BarChart3,
   ExternalLink,
 } from "lucide-react";
-import { ass, bbbb, hf, pf, wss } from "../assets/res";
+import { ass, bbbb, hf, p1, p2, p3, p4, pf, wss } from "../assets/res";
 
 const Portfolio: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -53,158 +53,158 @@ const Portfolio: React.FC = () => {
     },
   ];
 
- const projectTypes = [
-  {
-    title: "Executive Thought Leadership",
-    category: "Ghostwriting",
-        color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
-    description:
-      "C-suite executives sharing industry insights and strategic perspectives through articles and speeches.",
-    metrics: "Published in 15+ major publications",
-    icon: Users,
-  },
-  {
-    title: "Business Book Projects",
-       color: 'bg-green-200',
-    iconColor: 'text-green-600',
-    category: "Book Writing",
-    description:
-      "Complete book manuscripts for entrepreneurs and business leaders sharing their expertise.",
-    metrics: "3 bestseller achievements",
-    icon: TrendingUp,
-  },
-  {
-    title: "Industry White Papers",
-     color: 'bg-yellow-200',
-    iconColor: 'text-yellow-600',
-    category: "Business Writing",
-    description:
-      "In-depth research and analysis pieces for companies establishing thought leadership.",
-    metrics: "3,000+ downloads across projects",
-    icon: Shield,
-  },
-  {
-    title: "Personal Memoirs",
-        color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
-    category: "Ghostwriting",
-    description:
-      "Life stories and personal journeys crafted with sensitivity and authenticity.",
-    metrics: "100% client satisfaction",
-    icon: Users,
-  },
-  {
-    title: "Content Marketing Series",
-       color: 'bg-green-200',
-    iconColor: 'text-green-600',
-    category: "Content Creation",
-    description:
-      "Comprehensive content strategies including blogs, articles, and social media campaigns.",
-    metrics: "Average 200% engagement increase",
-    icon: TrendingUp,
-  },
-  {
-    title: "Corporate Communications",
-     color: 'bg-yellow-200',
-    iconColor: 'text-yellow-600',
-    category: "Business Writing",
-    description:
-      "Internal and external communications that align with brand voice and corporate values.",
-    metrics: "Improved stakeholder engagement",
-    icon: Shield,
-  },
-  {
-    title: "Heartfelt Poetry & Keepsakes",
-         color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
-    category: "Heartfelt Features",
-    description:
-      "Custom poems, photo books, and couple narratives that capture deep emotions and special occasions.",
-    metrics: "Over 200 personalized features delivered",
-    icon: Heart,
-  },
-  {
-    title: "Creative Campaign Copy",
-     color: 'bg-green-200',
-       iconColor: 'text-green-600',
-    category: "Marketing and Copywriting",
-    description:
-      "Persuasive ad copy, social media blurbs, and newsletter content tailored to drive conversions.",
-    metrics: "3x average CTR increase for clients",
-    icon: PenTool,
-  },
-  {
-    title: "Scripted Storytelling",
-   color: 'bg-yellow-200',
-    iconColor: 'text-yellow-600',
-    category: "Creative Writing",
-    description:
-      "Scripts, jingles, and poetic compositions designed for multimedia storytelling and entertainment.",
-    metrics: "Featured in 3+ short films & productions",
-    icon: BookOpenCheck,
-  },
-  {
-    title: "Academic Research Projects",
-      color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
-    category: "Academic and Research Writing",
-    description:
-      "Well-cited research papers, case studies, and educational content for academic and institutional use.",
-    metrics: "Used in 12+ universities ",
-    icon: PencilLine,
-  },
-  {
-    title: "Personal Tributes & Letters",
-      color: 'bg-green-200',
-    iconColor: 'text-green-600',
-    category: "Personal Content",
-    description:
-      "Meaningful letters, obituaries, and essays crafted to express personal sentiments and reflections.",
-    metrics: "100% approval rate from clients",
-    icon: Mail,
-  },
-    {
-    title: "Full-Stack Web Development",
-    category: "Web Development",
-    color: 'bg-green-200',
-    iconColor: 'text-green-600',
-    description:
-      "Custom-built websites and dashboards using modern stacks like React, Node.js, and MongoDB.",
-    metrics: "15+ enterprise and personal apps deployed",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "API & Backend Services",
-    category: "Backend Engineering",
-    color: 'bg-yellow-200',
-    iconColor: 'text-yellow-600',
-    description:
-      "RESTful API and server-side logic to power applications at scale using Express and Node.",
-    metrics: "Secured 25k+ API calls/month",
-    icon: Server,
-  },
-  {
-    title: "Mobile-First UI/UX",
-    category: "Frontend Design",
-    color: 'bg-orange-200',
-    iconColor: 'text-orange-600',
-    description:
-      "Responsive interfaces optimized for performance, accessibility, and seamless user experience.",
-  metrics: "Tested across mobile, tablet, and desktop resolutions",
-    icon: Code2,
-  },
-  {
-    title: "SEO & Performance Optimization",
-    category: "Tech Optimization",
-    color: 'bg-green-200',
-    iconColor: 'text-green-600',
-    description:
-      "Technical SEO, lazy loading, and code splitting to boost page speed and visibility.",
-    metrics: "Reduced load times by 60%",
-    icon: BarChart3,
-  },
-];
+//  const projectTypes = [
+//   {
+//     title: "Executive Thought Leadership",
+//     category: "Ghostwriting",
+//         color: 'bg-orange-200',
+//     iconColor: 'text-orange-600',
+//     description:
+//       "C-suite executives sharing industry insights and strategic perspectives through articles and speeches.",
+//     metrics: "Published in 15+ major publications",
+//     icon: Users,
+//   },
+//   {
+//     title: "Business Book Projects",
+//        color: 'bg-green-200',
+//     iconColor: 'text-green-600',
+//     category: "Book Writing",
+//     description:
+//       "Complete book manuscripts for entrepreneurs and business leaders sharing their expertise.",
+//     metrics: "3 bestseller achievements",
+//     icon: TrendingUp,
+//   },
+//   {
+//     title: "Industry White Papers",
+//      color: 'bg-yellow-200',
+//     iconColor: 'text-yellow-600',
+//     category: "Business Writing",
+//     description:
+//       "In-depth research and analysis pieces for companies establishing thought leadership.",
+//     metrics: "3,000+ downloads across projects",
+//     icon: Shield,
+//   },
+//   {
+//     title: "Personal Memoirs",
+//         color: 'bg-orange-200',
+//     iconColor: 'text-orange-600',
+//     category: "Ghostwriting",
+//     description:
+//       "Life stories and personal journeys crafted with sensitivity and authenticity.",
+//     metrics: "100% client satisfaction",
+//     icon: Users,
+//   },
+//   {
+//     title: "Content Marketing Series",
+//        color: 'bg-green-200',
+//     iconColor: 'text-green-600',
+//     category: "Content Creation",
+//     description:
+//       "Comprehensive content strategies including blogs, articles, and social media campaigns.",
+//     metrics: "Average 200% engagement increase",
+//     icon: TrendingUp,
+//   },
+//   {
+//     title: "Corporate Communications",
+//      color: 'bg-yellow-200',
+//     iconColor: 'text-yellow-600',
+//     category: "Business Writing",
+//     description:
+//       "Internal and external communications that align with brand voice and corporate values.",
+//     metrics: "Improved stakeholder engagement",
+//     icon: Shield,
+//   },
+//   {
+//     title: "Heartfelt Poetry & Keepsakes",
+//          color: 'bg-orange-200',
+//     iconColor: 'text-orange-600',
+//     category: "Heartfelt Features",
+//     description:
+//       "Custom poems, photo books, and couple narratives that capture deep emotions and special occasions.",
+//     metrics: "Over 200 personalized features delivered",
+//     icon: Heart,
+//   },
+//   {
+//     title: "Creative Campaign Copy",
+//      color: 'bg-green-200',
+//        iconColor: 'text-green-600',
+//     category: "Marketing and Copywriting",
+//     description:
+//       "Persuasive ad copy, social media blurbs, and newsletter content tailored to drive conversions.",
+//     metrics: "3x average CTR increase for clients",
+//     icon: PenTool,
+//   },
+//   {
+//     title: "Scripted Storytelling",
+//    color: 'bg-yellow-200',
+//     iconColor: 'text-yellow-600',
+//     category: "Creative Writing",
+//     description:
+//       "Scripts, jingles, and poetic compositions designed for multimedia storytelling and entertainment.",
+//     metrics: "Featured in 3+ short films & productions",
+//     icon: BookOpenCheck,
+//   },
+//   {
+//     title: "Academic Research Projects",
+//       color: 'bg-orange-200',
+//     iconColor: 'text-orange-600',
+//     category: "Academic and Research Writing",
+//     description:
+//       "Well-cited research papers, case studies, and educational content for academic and institutional use.",
+//     metrics: "Used in 12+ universities ",
+//     icon: PencilLine,
+//   },
+//   {
+//     title: "Personal Tributes & Letters",
+//       color: 'bg-green-200',
+//     iconColor: 'text-green-600',
+//     category: "Personal Content",
+//     description:
+//       "Meaningful letters, obituaries, and essays crafted to express personal sentiments and reflections.",
+//     metrics: "100% approval rate from clients",
+//     icon: Mail,
+//   },
+//     {
+//     title: "Full-Stack Web Development",
+//     category: "Web Development",
+//     color: 'bg-green-200',
+//     iconColor: 'text-green-600',
+//     description:
+//       "Custom-built websites and dashboards using modern stacks like React, Node.js, and MongoDB.",
+//     metrics: "15+ enterprise and personal apps deployed",
+//     icon: MonitorSmartphone,
+//   },
+//   {
+//     title: "API & Backend Services",
+//     category: "Backend Engineering",
+//     color: 'bg-yellow-200',
+//     iconColor: 'text-yellow-600',
+//     description:
+//       "RESTful API and server-side logic to power applications at scale using Express and Node.",
+//     metrics: "Secured 25k+ API calls/month",
+//     icon: Server,
+//   },
+//   {
+//     title: "Mobile-First UI/UX",
+//     category: "Frontend Design",
+//     color: 'bg-orange-200',
+//     iconColor: 'text-orange-600',
+//     description:
+//       "Responsive interfaces optimized for performance, accessibility, and seamless user experience.",
+//   metrics: "Tested across mobile, tablet, and desktop resolutions",
+//     icon: Code2,
+//   },
+//   {
+//     title: "SEO & Performance Optimization",
+//     category: "Tech Optimization",
+//     color: 'bg-green-200',
+//     iconColor: 'text-green-600',
+//     description:
+//       "Technical SEO, lazy loading, and code splitting to boost page speed and visibility.",
+//     metrics: "Reduced load times by 60%",
+//     icon: BarChart3,
+//   },
+// ];
 
 const industries = [
   { name: "Technology", bg: "bg-blue-100", text: "text-blue-700" },
@@ -310,7 +310,7 @@ const allProjects = [
     },
 ];
 
-
+const productionImages = [p1, p2, p3, p4]
 
 const filteredProjects =
     filter === 'All' ? allProjects : allProjects.filter(p => p.category === filter);
@@ -375,7 +375,7 @@ const filteredProjects =
       </section>
 
       {/* Project Types */}
-      <section className="py-20 bg-sec/20">
+      {/* <section className="py-20 bg-sec/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -393,48 +393,17 @@ const filteredProjects =
             </p>
           </motion.div>
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {projectTypes.map((project, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -5 }}
-      className={`bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100`}
-    >
-      {/* Badge + Icon */}
-      <div className="flex items-center justify-between mb-4">
-        <span
-          className={`inline-block ${project.color} text-gray-900 px-3 py-1 rounded-full text-sm font-medium`}
-        >
-          {project.category}
-        </span>
-        <project.icon className={`w-6 h-6 ${project.iconColor}`} />
-      </div>
 
-      {/* Title & Description */}
-      <h3 className="font-serif text-base  text-gray-900 mb-3">
-        {project.title}
-      </h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-
-      {/* Metric */}
-      <div className="border-t pt-4">
-        <p className="text-sm font-medium text-sec1">{project.metrics}</p>
-      </div>
-    </motion.div>
-  ))}
-</div>
     </div>
-      </section>
+      </section> */}
 
-       <section className="py-12 px-4 max-w-7xl mx-auto">
+       <section className="py-12 bg-sec/10 px-4 max-w-7xl mx-auto">
       <div className="mb-8 flex flex-wrap justify-center">
        
-            <p className="px-4 py-2 rounded-full border bg-sec/20 text-base  font-medium transition duration-200 ">Web/Applications</p>
-    
+       <p className="px-4 py-2 rounded-full border bg-sec/20 text-base font-medium transition duration-200">
+  Live Client Projects
+</p>
+
       </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -495,6 +464,50 @@ const filteredProjects =
 </div>
 
     </section>
+
+<section className="relative bg-gray-50 py-20 overflow-hidden">
+  {/* Curved Top Divider */}
+  <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
+    <svg className="relative block w-full h-20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">
+      <path d="M0,0V46.29c47.06,22.39,103.36,29,158.17,17.39C274.23,43.43,396,2,518.3,1.88,638.3,1.76,719.7,41.65,839.69,55.48c112.27,13,219.35-6.86,360.31-51.7V0Z" fill="#f9fafb"></path>
+    </svg>
+  </div>
+
+  {/* Background Text */}
+  
+
+  {/* Section Content */}
+  <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">
+        Our Production Room
+      </h2>
+      <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+        Where books breathe — a peek into our book-filled workspace that inspires creation.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {productionImages.map((img, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.1 }}
+          viewport={{ once: true }}
+          className={`relative group overflow-hidden rounded-2xl shadow-md transition-all duration-300 transform ${idx % 2 === 0 ? 'mt-0' : 'mt-6'}`}
+        >
+          <img
+            src={img}
+            alt={`Production room ${idx + 1}`}
+            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Testimonials Carousel */}
       <section className="py-20 bg-white">

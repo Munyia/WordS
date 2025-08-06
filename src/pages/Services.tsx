@@ -138,7 +138,7 @@ const services = [
     icon: Monitor,
     title: 'Web Development',
     description: 'Build scalable and responsive websites using modern tech stacks tailored to your goals.',
-    features: ['Frontend & Backend', 'MERN Stack', 'API Integration', 'CMS & Admin Panels'],
+    features: ['Frontend & Backend',  'API Integration', 'CMS & Admin Panels'],
     color: 'bg-yellow-200',
     iconColor: 'text-yellow-600',
   },
