@@ -119,12 +119,11 @@ const features = [
     </h1>
 
     {/* Description Paragraph */}
-    <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 px-4 sm:px-6 md:px-8 max-w-3xl mx-auto leading-relaxed">
-      Transform your ideas into compelling stories, powerful visuals, and functional digital products with Wordsmitters.
+    <p className="mt-4 text-sm sm:text-base font-merri md:text-lg lg:text-xl text-gray-700 px-4 sm:px-6 md:px-8 max-w-3xl mx-auto leading-10">
+    The all-in-one studio for your content and technology.
       <br className="hidden sm:block" />
-      From ghostwriting and publishing to web development and mobile apps,
-      <br className="hidden sm:block" />
-      we craft words, designs, and code that resonate — ensuring your message is clear, engaging, and unforgettable.
+From the first draft to the final line of code, we provide the infrastructure you need to lead. We offer expert Ghostwriting and Publishing for novels, fiction, and non-fiction, alongside high-performance Web Development and Mobile App Brand Management.
+   
     </p>
   </header>
 </section>
