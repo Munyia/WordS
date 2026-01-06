@@ -4,20 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Users, Award, Laptop, ShieldCheck, BarChart3,   } from 'lucide-react';
 // import AnimatedText from '../components/AnimatedText';
 
-const words = ["Ghost Writing", "Publishing", "Editing", "Book Review"];
-const colorClasses = ["text-pry",  "text-sec1", "text-pry", "text-sec",  ];
-
-const techServices = [
-  { label: 'Web Development', icon: '💻' },
-  { label: 'Mobile App Development', icon: '📱' },
-  { label: 'UI/UX Design', icon: '🎨' },
-  { label: 'E-commerce Solutions', icon: '🛒' },
-  { label: 'Custom Dashboards', icon: '📊' },
-  { label: 'SEO Optimization', icon: '🔍' },
-  { label: 'Graphics Design', icon: '🖼️' },
-  { label: 'Video Editing', icon: '🎬' },
-  { label: 'Performance Optimization', icon: '🚀' }
-];
+const words = ["Ghost Writing", "Publishing", "Web Development", "Mobile Application",];
+const colorClasses = [ "text-sec1",   ];
 
 
 
@@ -92,7 +80,7 @@ const features = [
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-      className="absolute -top-32 -right-32 w-72 h-72 sm:w-80 sm:h-80 bg-sec1/20 rounded-full"
+      className="absolute -top-32 -right-32 w-72 h-72 sm:w-80 sm:h-80 bg-sec/20 rounded-full"
     />
     <motion.div
       animate={{ rotate: -360 }}
@@ -106,7 +94,7 @@ const features = [
     {/* <h2 className="absolute text-[80px] sm:text-[120px] font-bold text-gray-200 z-0 top-20 left-1/2 transform -translate-x-1/2 pointer-events-none select-none">
     wordsmitters
   </h2> */}
-    <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 font-bold leading-tight mb-6">
+    <h1 className="text-4xl sm:text-4xl md:text-4xl lg:text-4xl text-gray-900 font-bold leading-tight mb-6">
       <div className="mb-2 sm:mb-4">Professional</div>
 
       {/* Animated Word */}
@@ -114,7 +102,7 @@ const features = [
         <AnimatePresence mode="wait">
           <motion.span
             key={words[currentWordIndex]}
-            className={`absolute left-0 right-0 w-full text-center text-4xl sm:text-4xl md:text-5xl font-bold ${colorClasses[currentWordIndex % colorClasses.length]}`}
+            className={`absolute left-0 right-0 w-full text-center text-3xl sm:text-3xl md:text-6xl font-bold ${colorClasses[currentWordIndex % colorClasses.length]}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -125,22 +113,9 @@ const features = [
         </AnimatePresence>
       </div>
 
-      {/* Marquee */}
-      <div className="relative w-full overflow-hidden py-2 sm:py-4">
-        <div className="animate-marquee-alt flex w-max space-x-10 sm:space-x-16 px-4">
-          {[...techServices, ...techServices].map((item, idx) => (
-            <div
-              key={idx}
-              className={`flex font-serif items-center gap-2 sm:gap-3 text-2xl sm:text-2xl md:text-2xl font-semibold min-w-max ${colorClasses[idx % colorClasses.length]}`}
-            >
-              <span className="text-2xl sm:text-2xl md:text-3xl">{item.icon}</span>
-              <span className="whitespace-nowrap">{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+  
 
-      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Services</div>
+      <div className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-bold">Services</div>
     </h1>
 
     {/* Description Paragraph */}

@@ -33,5 +33,179 @@ body::-webkit-scrollbar {
 .animate-marquee-alt:hover {
   animation-play-state: paused;
 }
+/* index.css (add at the bottom) */
+/* ===== Carousel shell (subtle glass but not “white block”) ===== */
+.wm-hero-shell {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 28px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== 3D Carousel ===== */
+.wm-3d-wrapper {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.wm-3d-inner {
+  --w: clamp(110px, 9vw, 145px);
+  --h: clamp(160px, 12vw, 200px);
+  --translateZ: calc(var(--w) + var(--h) + 70px);
+  --rotateX: -14deg;
+  --perspective: 1200px;
+
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  animation: wm-rotating 18s linear infinite;
+}
+
+@keyframes wm-rotating {
+  from {
+    transform: translate(-50%, -50%) perspective(var(--perspective))
+      rotateX(var(--rotateX))
+      rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) perspective(var(--perspective))
+      rotateX(var(--rotateX))
+      rotateY(360deg);
+  }
+}
+
+.wm-3d-card {
+  position: absolute;
+  inset: 0;
+  border-color: rgba(var(--card-color), 0.5); /* /50 */
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+}
+
+.wm-3d-img {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--card-color), 0.2) 0%,
+    rgba(var(--card-color), 0.6) 80%,
+    rgba(var(--card-color), 0.9) 100%
+  );
+}
+
+/* ===== Optional marquee (moving tech text) ===== *//* index.css (add at the bottom) */
+
+/* Make the carousel container blend in (no visible card) */
+.wm-hero-shell {
+  width: 100%;
+  max-width: 520px;
+  padding: 0;              /* remove “card padding” */
+  background: transparent; /* no white bg */
+  border: none;            /* no border */
+  box-shadow: none;        /* no shadow */
+  backdrop-filter: none;   /* no blur layer */
+}
 
 
+/* ===== 3D Carousel ===== */
+.wm-3d-wrapper {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  opacity: 0.9; /* minimalistic */
+}
+
+.wm-3d-inner {
+  --w: clamp(110px, 9vw, 145px);
+  --h: clamp(160px, 12vw, 200px);
+  --translateZ: calc(var(--w) + var(--h) + 70px);
+  --rotateX: -14deg;
+  --perspective: 1200px;
+
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  animation: wm-rotating 18s linear infinite;
+}
+
+@keyframes wm-rotating {
+  from {
+    transform: translate(-50%, -50%) perspective(var(--perspective))
+      rotateX(var(--rotateX))
+      rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) perspective(var(--perspective))
+      rotateX(var(--rotateX))
+      rotateY(360deg);
+  }
+}
+
+.wm-3d-card {
+  position: absolute;
+  inset: 0;
+  border-color: rgba(var(--card-color), 0.25); /* softer border */
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+}
+
+.wm-3d-img {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--card-color), 0.10) 0%,
+    rgba(var(--card-color), 0.18) 60%,
+    rgba(var(--card-color), 0.28) 100%
+  );
+}
+
+/* ===== Mobile tuning ===== */
+@media (max-width: 640px) {
+  .wm-hero-shell {
+    max-width: 100%;
+    padding: 14px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.45);
+  }
+
+  .wm-3d-wrapper {
+    height: 320px;
+    opacity: 0.85;
+  }
+
+  .wm-3d-inner {
+    --translateZ: 240px; /* reduce depth on mobile */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .wm-3d-wrapper {
+    height: 300px;
+  }
+  .wm-3d-inner {
+    --w: 100px;
+    --h: 150px;
+    --translateZ: 220px;
+  }
+}
